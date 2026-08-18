@@ -1,0 +1,138 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- PASO 3 DE 3 · PAGO
+     ANTES DE MONTAR ESTA PÁGINA:
+     1) Comprueba que tienes un procesador de pago conectado en
+        Settings > Payments > Integrations (Stripe u otro). Si no lo tienes,
+        conéctalo ahí primero — sin esto el Order Form no puede cobrar.
+     2) Crea un Producto en Payments > Products, ej. "Reserva de plaza — 500€".
+        La web usa 500€ como depósito universal (así lo dice el copy en varias
+        secciones), así que un único producto cubre Curso Grupal, VIP y
+        Monográfico para empezar. Si más adelante quieres depósitos distintos
+        por curso, se crean productos adicionales y se duplica este paso.
+     3) Añade el elemento Order Form nativo de GHL dentro de #funnel-payment-slot
+        (reemplazando el placeholder) y selecciona ese producto. -->
+
+<style>
+:root{
+  --bg: #0a0908;
+  --bg-alt: #100e0c;
+  --card: #17140f;
+  --card-border: #2a2419;
+  --text: #f3efe7;
+  --text-dim: #b8b0a2;
+  --text-faint: #7d7568;
+  --gold-1: #c9962f;
+  --gold-2: #f2cf6b;
+  --gold-3: #a9781f;
+  --gold-grad: linear-gradient(120deg, var(--gold-3) 0%, var(--gold-2) 45%, var(--gold-1) 100%);
+  --radius: 18px;
+  --radius-sm: 12px;
+  --shadow-gold: 0 10px 30px -12px rgba(201,150,47,.45);
+  --font-body: 'Poppins', sans-serif;
+  --font-accent: 'Playfair Display', serif;
+}
+*,*::before,*::after{ box-sizing:border-box; }
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:var(--font-body); font-weight:300; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+h1,h2,h3{ margin:0; font-weight:600; letter-spacing:-0.01em; }
+p{ margin:0; }
+em{
+  font-family:var(--font-accent); font-style:italic; font-weight:600;
+  background:var(--gold-grad); -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.container{ width:100%; max-width:640px; margin:0 auto; padding:0 24px; }
+
+.funnel-header{ padding:22px 0; text-align:center; border-bottom:1px solid rgba(255,255,255,.06); }
+.funnel-header img{ height:56px; width:auto; margin:0 auto; }
+
+.progress{ display:flex; justify-content:center; align-items:center; gap:10px; padding:28px 0 0; }
+.progress-step{ display:flex; align-items:center; gap:8px; font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--text-faint); }
+.progress-dot{ width:9px; height:9px; border-radius:50%; border:1.5px solid var(--card-border); background:transparent; }
+.progress-step.active{ color:var(--gold-2); }
+.progress-step.active .progress-dot{ background:var(--gold-grad); border-color:transparent; box-shadow:0 0 0 3px rgba(201,150,47,.15); }
+.progress-step.done .progress-dot{ background:var(--gold-1); border-color:transparent; }
+.progress-line{ width:34px; height:1px; background:var(--card-border); }
+
+.funnel-main{ padding:44px 0 90px; }
+.funnel-head{ text-align:center; margin:0 auto 36px; }
+.funnel-head h1{ font-size:clamp(1.7rem, 4vw, 2.2rem); margin-bottom:12px; }
+.funnel-head p{ color:var(--text-dim); font-size:.95rem; }
+
+.summary-card{
+  background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius);
+  padding:24px 28px; margin-bottom:24px;
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.summary-card .label{ font-size:.7rem; text-transform:uppercase; letter-spacing:.1em; color:var(--text-faint); display:block; margin-bottom:6px; }
+.summary-card .val{ font-size:.98rem; font-weight:500; }
+.summary-card .amount{ font-family:var(--font-accent); font-style:italic; font-size:1.7rem; color:var(--gold-2); }
+
+#funnel-payment-slot{
+  background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius);
+  padding:34px; min-height:140px;
+}
+.form-slot-placeholder{
+  border:1.5px dashed var(--card-border); border-radius:var(--radius-sm);
+  padding:26px; text-align:center; color:var(--text-faint); font-size:.85rem; line-height:1.7;
+}
+.form-slot-placeholder strong{ color:var(--gold-2); }
+
+.trust-row{
+  display:flex; justify-content:center; gap:26px; flex-wrap:wrap;
+  margin-top:28px; font-size:.76rem; color:var(--text-faint); letter-spacing:.02em;
+}
+.fine-print{ text-align:center; font-size:.76rem; color:var(--text-faint); margin-top:22px; max-width:480px; margin-left:auto; margin-right:auto; }
+</style>
+
+<header class="funnel-header">
+  <img src="assets/img/logo.png" alt="Duesthetic Academy">
+</header>
+
+<div class="progress">
+  <div class="progress-step done"><span class="progress-dot"></span>Reservar</div>
+  <span class="progress-line"></span>
+  <div class="progress-step active"><span class="progress-dot"></span>Pago</div>
+  <span class="progress-line"></span>
+  <div class="progress-step"><span class="progress-dot"></span>Agenda</div>
+</div>
+
+<main class="funnel-main">
+  <div class="container">
+
+    <div class="funnel-head">
+      <h1>Un último paso</h1>
+      <p>Confirma tu reserva completando el pago del depósito. El resto se abona por transferencia hasta 3 semanas antes del inicio del curso.</p>
+    </div>
+
+    <div class="summary-card">
+      <div>
+        <span class="label">Concepto</span>
+        <span class="val">Reserva de plaza</span>
+      </div>
+      <span class="amount">500€</span>
+    </div>
+
+    <div id="funnel-payment-slot">
+      <div class="form-slot-placeholder">
+        Sustituye este recuadro por el elemento <strong>Order Form</strong> nativo de GHL,
+        enlazado al producto "Reserva de plaza — 500€"
+        (ver instrucciones en el comentario del código fuente, arriba del todo).
+      </div>
+    </div>
+
+    <div class="trust-row">
+      <span>🔒 Pago encriptado SSL</span>
+      <span>💳 Visa · Mastercard</span>
+    </div>
+    <p class="fine-print">Al completar el pago aceptas las condiciones de reserva de Duesthetic Academy. El depósito confirma tu plaza; consulta la política de cambios de edición en las preguntas frecuentes.</p>
+
+  </div>
+</main>
