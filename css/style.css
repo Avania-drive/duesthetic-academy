@@ -120,7 +120,7 @@ em{
   gap:20px;
   padding:12px 24px;
 }
-.logo img{ height:38px; width:auto; }
+.logo img{ height:152px; width:auto; }
 .main-nav{
   display:flex;
   align-items:center;
@@ -515,7 +515,7 @@ em{
   text-align:center;
 }
 .footer-inner{ display:flex; flex-direction:column; align-items:center; gap:8px; }
-.footer-logo{ height:34px; margin-bottom:10px; opacity:.9; }
+.footer-logo{ height:136px; margin-bottom:10px; opacity:.9; }
 .footer-tagline{
   font-family:var(--font-accent);
   font-style:italic;
