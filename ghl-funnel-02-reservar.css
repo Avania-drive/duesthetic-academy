@@ -1,30 +1,14 @@
 /* ==========================================================================
    Duesthetic Academy — Funnel Paso 2 · Reservar el curso
    Pega este archivo completo en el campo Custom CSS de esta página de GHL.
+   Valores hardcodeados a propósito (sin :root/var()) porque GHL suele
+   aislar/reescribir el CSS por página, y eso rompe los custom properties.
    ========================================================================== */
 
-:root{
-  --bg: #0a0908;
-  --bg-alt: #100e0c;
-  --card: #17140f;
-  --card-border: #2a2419;
-  --text: #f3efe7;
-  --text-dim: #b8b0a2;
-  --text-faint: #7d7568;
-  --gold-1: #c9962f;
-  --gold-2: #f2cf6b;
-  --gold-3: #a9781f;
-  --gold-grad: linear-gradient(120deg, var(--gold-3) 0%, var(--gold-2) 45%, var(--gold-1) 100%);
-  --radius: 18px;
-  --radius-sm: 12px;
-  --shadow-gold: 0 10px 30px -12px rgba(201,150,47,.45);
-  --font-body: 'Poppins', sans-serif;
-  --font-accent: 'Playfair Display', serif;
-}
 *,*::before,*::after{ box-sizing:border-box; }
 body{
-  margin:0; background:var(--bg); color:var(--text);
-  font-family:var(--font-body); font-weight:300; line-height:1.6;
+  margin:0; background:#0a0908; color:#f3efe7;
+  font-family:'Poppins', sans-serif; font-weight:300; line-height:1.6;
   -webkit-font-smoothing:antialiased;
 }
 img{ max-width:100%; display:block; }
@@ -32,8 +16,8 @@ a{ color:inherit; text-decoration:none; }
 h1,h2,h3,h4{ margin:0; font-weight:600; letter-spacing:-0.01em; }
 p{ margin:0; }
 em{
-  font-family:var(--font-accent); font-style:italic; font-weight:600;
-  background:var(--gold-grad); -webkit-background-clip:text; background-clip:text; color:transparent;
+  font-family:'Playfair Display', serif; font-style:italic; font-weight:600;
+  background:linear-gradient(120deg, #a9781f 0%, #f2cf6b 45%, #c9962f 100%); -webkit-background-clip:text; background-clip:text; color:transparent;
 }
 .container{ width:100%; max-width:900px; margin:0 auto; padding:0 24px; }
 
@@ -50,51 +34,51 @@ em{
 }
 .progress-step{
   display:flex; align-items:center; gap:8px;
-  font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--text-faint);
+  font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:#7d7568;
 }
 .progress-dot{
   width:9px; height:9px; border-radius:50%;
-  border:1.5px solid var(--card-border); background:transparent;
+  border:1.5px solid #2a2419; background:transparent;
 }
-.progress-step.active{ color:var(--gold-2); }
-.progress-step.active .progress-dot{ background:var(--gold-grad); border-color:transparent; box-shadow:0 0 0 3px rgba(201,150,47,.15); }
-.progress-step.done .progress-dot{ background:var(--gold-1); border-color:transparent; }
-.progress-line{ width:34px; height:1px; background:var(--card-border); }
+.progress-step.active{ color:#f2cf6b; }
+.progress-step.active .progress-dot{ background:linear-gradient(120deg, #a9781f 0%, #f2cf6b 45%, #c9962f 100%); border-color:transparent; box-shadow:0 0 0 3px rgba(201,150,47,.15); }
+.progress-step.done .progress-dot{ background:#c9962f; border-color:transparent; }
+.progress-line{ width:34px; height:1px; background:#2a2419; }
 
 .funnel-main{ padding:44px 0 90px; }
 .funnel-head{ text-align:center; max-width:560px; margin:0 auto 44px; }
 .funnel-head h1{ font-size:clamp(1.8rem, 4vw, 2.4rem); margin-bottom:14px; }
-.funnel-head p{ color:var(--text-dim); font-size:.98rem; }
+.funnel-head p{ color:#b8b0a2; font-size:.98rem; }
 
 .course-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:16px; }
 .course-pick{
-  background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius);
+  background:#17140f; border:1px solid #2a2419; border-radius:18px;
   padding:24px 22px; display:flex; flex-direction:column; gap:6px;
 }
-.course-pick.featured{ border-color:var(--gold-1); box-shadow:var(--shadow-gold); }
-.course-pick .kicker{ font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gold-2); margin-bottom:4px; }
+.course-pick.featured{ border-color:#c9962f; box-shadow:0 10px 30px -12px rgba(201,150,47,.45); }
+.course-pick .kicker{ font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:#f2cf6b; margin-bottom:4px; }
 .course-pick h3{ font-size:1.15rem; margin-bottom:6px; }
-.course-pick .price{ font-family:var(--font-accent); font-style:italic; font-size:1.5rem; color:var(--gold-2); margin:6px 0; }
-.course-pick .note{ font-size:.78rem; color:var(--text-faint); }
+.course-pick .price{ font-family:'Playfair Display', serif; font-style:italic; font-size:1.5rem; color:#f2cf6b; margin:6px 0; }
+.course-pick .note{ font-size:.78rem; color:#7d7568; }
 
 .reserve-note{
-  text-align:center; font-size:.82rem; color:var(--text-faint);
+  text-align:center; font-size:.82rem; color:#7d7568;
   max-width:520px; margin:0 auto 40px;
 }
 
 #funnel-form-slot{
-  background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius);
+  background:#17140f; border:1px solid #2a2419; border-radius:18px;
   padding:38px; min-height:120px;
 }
 .form-slot-placeholder{
-  border:1.5px dashed var(--card-border); border-radius:var(--radius-sm);
-  padding:26px; text-align:center; color:var(--text-faint); font-size:.85rem; line-height:1.7;
+  border:1.5px dashed #2a2419; border-radius:12px;
+  padding:26px; text-align:center; color:#7d7568; font-size:.85rem; line-height:1.7;
 }
-.form-slot-placeholder strong{ color:var(--gold-2); }
+.form-slot-placeholder strong{ color:#f2cf6b; }
 
 .trust-row{
   display:flex; justify-content:center; gap:26px; flex-wrap:wrap;
-  margin-top:30px; font-size:.76rem; color:var(--text-faint); letter-spacing:.02em;
+  margin-top:30px; font-size:.76rem; color:#7d7568; letter-spacing:.02em;
 }
 
 @media (max-width:760px){
