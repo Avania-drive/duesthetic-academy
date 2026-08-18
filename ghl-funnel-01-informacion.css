@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Duesthetic Academy — Funnel Paso 4 · Agendar con los doctores
+   Duesthetic Academy — Funnel Paso 1 · Información / Agenda tu llamada
    Pega este archivo completo en el campo Custom CSS de esta página de GHL.
    ========================================================================== */
 
@@ -50,11 +50,9 @@ em{
 
 .funnel-main{ padding:44px 0 90px; }
 .funnel-head{ text-align:center; max-width:560px; margin:0 auto 36px; }
-.badge-success{
-  display:inline-flex; align-items:center; gap:8px;
-  padding:8px 18px; border-radius:999px; border:1px solid var(--card-border);
-  background:rgba(201,150,47,.08); color:var(--gold-2);
-  font-size:.74rem; letter-spacing:.06em; text-transform:uppercase; margin-bottom:20px;
+.kicker{
+  display:inline-block; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--gold-2); font-weight:600; margin-bottom:14px;
 }
 .funnel-head h1{ font-size:clamp(1.8rem, 4vw, 2.4rem); margin-bottom:14px; }
 .funnel-head p{ color:var(--text-dim); font-size:.98rem; }
@@ -70,8 +68,11 @@ em{
 }
 .form-slot-placeholder strong{ color:var(--gold-2); }
 
-.info-row{
-  display:flex; justify-content:center; gap:30px; flex-wrap:wrap;
-  margin-top:30px; font-size:.82rem; color:var(--text-dim);
+.skip-note{
+  text-align:center; margin-top:26px; font-size:.85rem; color:var(--text-faint);
 }
-.info-row strong{ display:block; color:var(--gold-2); font-size:.7rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:4px; }
+.btn-link{
+  display:inline-block; font-size:.85rem; color:var(--gold-2);
+  border-bottom:1px solid var(--gold-1); margin-left:4px;
+}
+.btn-link:hover{ color:var(--gold-1); }

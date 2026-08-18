@@ -46,7 +46,7 @@ em{
 
 .progress{
   display:flex; justify-content:center; align-items:center; gap:10px;
-  padding:28px 0 0;
+  padding:28px 0 0; flex-wrap:wrap;
 }
 .progress-step{
   display:flex; align-items:center; gap:8px;

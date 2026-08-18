@@ -40,7 +40,7 @@ em{
 .funnel-header{ padding:22px 0; text-align:center; border-bottom:1px solid rgba(255,255,255,.06); }
 .funnel-header img{ height:56px; width:auto; margin:0 auto; }
 
-.progress{ display:flex; justify-content:center; align-items:center; gap:10px; padding:28px 0 0; }
+.progress{ display:flex; justify-content:center; align-items:center; gap:10px; padding:28px 0 0; flex-wrap:wrap; }
 .progress-step{ display:flex; align-items:center; gap:8px; font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--text-faint); }
 .progress-dot{ width:9px; height:9px; border-radius:50%; border:1.5px solid var(--card-border); background:transparent; }
 .progress-step.active{ color:var(--gold-2); }
