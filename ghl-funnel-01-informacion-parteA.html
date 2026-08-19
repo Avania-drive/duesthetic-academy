@@ -1,0 +1,42 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- PASO 1 DE 4 · INFORMACIÓN / AGENDA TU LLAMADA — PARTE A
+     Cómo montar esta página en GHL, en orden:
+     1) Añade un bloque Custom HTML y pega este archivo (Parte A).
+     2) Justo debajo, añade un Row nuevo con el elemento Calendar de GHL
+        (Inline Embed) del calendario "llamada con formadores" — el mismo
+        que ya usas en el popup de la landing.
+        Dale a ese Row estas propiedades para que combine con el resto:
+          - Ancho de contenido: 760px, centrado
+          - Fondo: #17140f
+          - Borde: 1px solid #2a2419
+          - Radio de borde: 18px
+          - Padding interno: 10px
+     3) Debajo de ese Row, añade otro bloque Custom HTML y pega
+        ghl-funnel-01-informacion-parteB.html (Parte B).
+     4) El CSS va aparte: pega ghl-funnel-01-informacion.css en el campo
+        Custom CSS de esta página de GHL (una sola vez). -->
+
+<header class="funnel-header">
+  <img src="https://duesthetic-academy.vercel.app/assets/img/logo.png" alt="Duesthetic Academy">
+</header>
+
+<div class="progress">
+  <div class="progress-step active"><span class="progress-dot"></span>Información</div>
+  <span class="progress-line"></span>
+  <div class="progress-step"><span class="progress-dot"></span>Reservar</div>
+  <span class="progress-line"></span>
+  <div class="progress-step"><span class="progress-dot"></span>Pago</div>
+  <span class="progress-line"></span>
+  <div class="progress-step"><span class="progress-dot"></span>Agenda</div>
+</div>
+
+<div class="container funnel-lead">
+  <div class="funnel-head">
+    <span class="kicker">01 · Información</span>
+    <h1>Agenda tu <em>llamada</em></h1>
+    <p>Recibe toda la información sobre la formación y resuelve tus dudas en una llamada personalizada con nuestro equipo. Te explicaremos el programa, metodología, fechas, sedes y modalidades disponibles antes de realizar tu reserva.</p>
+  </div>
+</div>

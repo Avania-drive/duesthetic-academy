@@ -32,7 +32,8 @@ em{
 .progress-step.done .progress-dot{ background: #c9962f !important; border-color: transparent !important; }
 .progress-line{ width: 34px !important; height: 1px !important; background: #2a2419 !important; }
 
-.funnel-main{ padding: 44px 0 90px !important; }
+.funnel-lead{ padding: 44px 0 28px !important; }
+.funnel-tail{ padding: 28px 0 90px !important; }
 .funnel-head{ text-align: center !important; max-width: 560px !important; margin: 0 auto 36px !important; }
 .kicker{
   display: inline-block !important; font-size: .72rem !important; letter-spacing: .14em !important; text-transform: uppercase !important;
@@ -40,17 +41,6 @@ em{
 }
 .funnel-head h1{ font-size: clamp(1.8rem, 4vw, 2.4rem) !important; margin-bottom: 14px !important; }
 .funnel-head p{ color: #b8b0a2 !important; font-size: .98rem !important; }
-
-#funnel-calendar-slot{
-  background: #17140f !important; border: 1px solid #2a2419 !important; border-radius: 18px !important;
-  padding: 10px !important; min-height: 480px !important;
-}
-.form-slot-placeholder{
-  border: 1.5px dashed #2a2419 !important; border-radius: 12px !important;
-  min-height: 440px !important; display: flex !important; align-items: center !important; justify-content: center !important;
-  text-align: center !important; color: #7d7568 !important; font-size: .85rem !important; line-height: 1.7 !important; padding: 26px !important;
-}
-.form-slot-placeholder strong{ color: #f2cf6b !important; }
 
 .skip-note{
   text-align: center !important; margin-top: 26px !important; font-size: .85rem !important; color: #7d7568 !important;

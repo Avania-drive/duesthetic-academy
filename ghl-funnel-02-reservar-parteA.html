@@ -1,0 +1,69 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- PASO 2 DE 4 · RESERVAR EL CURSO — PARTE A
+     Cómo montar esta página en GHL, en orden:
+     1) Añade un bloque Custom HTML y pega este archivo (Parte A).
+     2) Justo debajo, añade un Row nuevo con el elemento Form de GHL.
+        Campos del Form:
+          - Nombre (texto, obligatorio)
+          - Email (obligatorio)
+          - Teléfono (obligatorio)
+          - "¿Qué formación te interesa?" → Dropdown/Radio con opciones:
+              Curso Grupal / VIP / Monográfico — Toxina Botulínica / Monográfico — otra técnica
+        Para preseleccionar la formación según el botón pulsado en la landing:
+          en ese campo, activa "Prefill from URL parameter" (o equivalente) y usa
+          el parámetro "curso" — coincide con los enlaces de la landing (?curso=VIP, etc.)
+        En Form Settings > On Submit, configura redirección al Paso 3 (Pago).
+        Estilo del Form (pestaña Styles del propio Form Builder): fondo #17140f,
+        texto #f3efe7, acento dorado #c9962f, para que combine.
+        Dale a ese Row: ancho de contenido 900px centrado (sin fondo/borde propio,
+        el Form ya trae su tarjeta).
+     3) Debajo de ese Row, añade otro bloque Custom HTML y pega
+        ghl-funnel-02-reservar-parteB.html (Parte B).
+     4) El CSS va aparte: pega ghl-funnel-02-reservar.css en el campo Custom CSS
+        de esta página de GHL (una sola vez). -->
+
+<header class="funnel-header">
+  <img src="https://duesthetic-academy.vercel.app/assets/img/logo.png" alt="Duesthetic Academy">
+</header>
+
+<div class="progress">
+  <div class="progress-step done"><span class="progress-dot"></span>Información</div>
+  <span class="progress-line"></span>
+  <div class="progress-step active"><span class="progress-dot"></span>Reservar</div>
+  <span class="progress-line"></span>
+  <div class="progress-step"><span class="progress-dot"></span>Pago</div>
+  <span class="progress-line"></span>
+  <div class="progress-step"><span class="progress-dot"></span>Agenda</div>
+</div>
+
+<div class="container funnel-lead">
+  <div class="funnel-head">
+    <h1>Reserva tu <em>plaza</em></h1>
+    <p>Confirma la formación que quieres cursar y déjanos tus datos. En el siguiente paso completarás el pago de la reserva.</p>
+  </div>
+
+  <div class="course-grid">
+    <div class="course-pick">
+      <span class="kicker">Grupal</span>
+      <h3>Curso Grupal</h3>
+      <span class="price">1.500€</span>
+      <span class="note">Reserva 500€ · Pendiente 1.000€</span>
+    </div>
+    <div class="course-pick featured">
+      <span class="kicker">Exclusivo</span>
+      <h3>VIP</h3>
+      <span class="price">1.500€</span>
+      <span class="note">2 pagos · One-to-one</span>
+    </div>
+    <div class="course-pick">
+      <span class="kicker">A la carta</span>
+      <h3>Monográfico</h3>
+      <span class="price">1.000€</span>
+      <span class="note">Por edición · técnica a elegir</span>
+    </div>
+  </div>
+  <p class="reserve-note">Si llegaste aquí desde un botón "Reservar" de la web, tu formación ya viene preseleccionada en el formulario de abajo.</p>
+</div>

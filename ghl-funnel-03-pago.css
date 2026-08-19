@@ -32,7 +32,8 @@ em{
 .progress-step.done .progress-dot{ background: #c9962f !important; border-color: transparent !important; }
 .progress-line{ width: 34px !important; height: 1px !important; background: #2a2419 !important; }
 
-.funnel-main{ padding: 44px 0 90px !important; }
+.funnel-lead{ padding: 44px 0 28px !important; }
+.funnel-tail{ padding: 28px 0 90px !important; }
 .funnel-head{ text-align: center !important; margin: 0 auto 36px !important; }
 .funnel-head h1{ font-size: clamp(1.7rem, 4vw, 2.2rem) !important; margin-bottom: 12px !important; }
 .funnel-head p{ color: #b8b0a2 !important; font-size: .95rem !important; }
@@ -45,16 +46,6 @@ em{
 .summary-card .label{ font-size: .7rem !important; text-transform: uppercase !important; letter-spacing: .1em !important; color: #7d7568 !important; display: block !important; margin-bottom: 6px !important; }
 .summary-card .val{ font-size: .98rem !important; font-weight: 500 !important; }
 .summary-card .amount{ font-family: 'Playfair Display', serif !important; font-style: italic !important; font-size: 1.7rem !important; color: #f2cf6b !important; }
-
-#funnel-payment-slot{
-  background: #17140f !important; border: 1px solid #2a2419 !important; border-radius: 18px !important;
-  padding: 34px !important; min-height: 140px !important;
-}
-.form-slot-placeholder{
-  border: 1.5px dashed #2a2419 !important; border-radius: 12px !important;
-  padding: 26px !important; text-align: center !important; color: #7d7568 !important; font-size: .85rem !important; line-height: 1.7 !important;
-}
-.form-slot-placeholder strong{ color: #f2cf6b !important; }
 
 .trust-row{
   display: flex !important; justify-content: center !important; gap: 26px !important; flex-wrap: wrap !important;

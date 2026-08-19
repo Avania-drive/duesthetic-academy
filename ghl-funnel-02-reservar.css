@@ -45,7 +45,8 @@ em{
 .progress-step.done .progress-dot{ background: #c9962f !important; border-color: transparent !important; }
 .progress-line{ width: 34px !important; height: 1px !important; background: #2a2419 !important; }
 
-.funnel-main{ padding: 44px 0 90px !important; }
+.funnel-lead{ padding: 44px 0 28px !important; }
+.funnel-tail{ padding: 28px 0 90px !important; }
 .funnel-head{ text-align: center !important; max-width: 560px !important; margin: 0 auto 44px !important; }
 .funnel-head h1{ font-size: clamp(1.8rem, 4vw, 2.4rem) !important; margin-bottom: 14px !important; }
 .funnel-head p{ color: #b8b0a2 !important; font-size: .98rem !important; }
@@ -65,16 +66,6 @@ em{
   text-align: center !important; font-size: .82rem !important; color: #7d7568 !important;
   max-width: 520px !important; margin: 0 auto 40px !important;
 }
-
-#funnel-form-slot{
-  background: #17140f !important; border: 1px solid #2a2419 !important; border-radius: 18px !important;
-  padding: 38px !important; min-height: 120px !important;
-}
-.form-slot-placeholder{
-  border: 1.5px dashed #2a2419 !important; border-radius: 12px !important;
-  padding: 26px !important; text-align: center !important; color: #7d7568 !important; font-size: .85rem !important; line-height: 1.7 !important;
-}
-.form-slot-placeholder strong{ color: #f2cf6b !important; }
 
 .trust-row{
   display: flex !important; justify-content: center !important; gap: 26px !important; flex-wrap: wrap !important;
