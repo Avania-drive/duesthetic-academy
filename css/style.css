@@ -528,10 +528,27 @@ em{
 .footer-links .dot{ margin:0 8px; }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 960px){
+/* El menú de 10 enlaces necesita más ancho que el resto de la grid para no
+   partirse en dos líneas, así que su breakpoint va aparte y más alto. */
+@media (max-width: 1140px){
   .main-nav{ display:none; }
   .nav-toggle{ display:flex; }
   .header-cta{ display:none; }
+
+  .main-nav.open{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:100%; left:0; right:0;
+    background:var(--bg);
+    padding:20px 24px 28px;
+    border-bottom:1px solid var(--card-border);
+    gap:14px;
+    z-index:99;
+  }
+}
+
+@media (max-width: 960px){
   .grid-3, .grid-4{ grid-template-columns:repeat(2,1fr); }
   .grid-2{ grid-template-columns:1fr; }
   .steps-grid{ grid-template-columns:1fr; }
@@ -547,15 +564,4 @@ em{
   .price-bar{ flex-direction:column; }
   .gallery-grid{ grid-template-columns:1fr; }
   .gallery-item--wide{ grid-column:span 1; }
-
-  .main-nav.open{
-    display:flex;
-    flex-direction:column;
-    position:absolute;
-    top:100%; left:0; right:0;
-    background:var(--bg);
-    padding:20px 24px 28px;
-    border-bottom:1px solid var(--card-border);
-    gap:14px;
-  }
 }
