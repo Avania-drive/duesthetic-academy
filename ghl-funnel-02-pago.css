@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Duesthetic Academy — Funnel Paso 4 · Agendar con los doctores
+   Duesthetic Academy — Funnel Paso 2 · Pago
    Pega este archivo completo en el campo Custom CSS de esta página de GHL.
    Valores hardcodeados a propósito (sin :root/var()) porque GHL suele
    aislar/reescribir el CSS por página, y eso rompe los custom properties.
@@ -19,7 +19,7 @@ em{
   font-family: 'Playfair Display', serif !important; font-style: italic !important; font-weight: 600 !important;
   background: linear-gradient(120deg, #a9781f 0%, #f2cf6b 45%, #c9962f 100%) !important; -webkit-background-clip: text !important; background-clip: text !important; color: transparent !important;
 }
-.container{ width: 100% !important; max-width: 760px !important; margin: 0 auto !important; padding: 0 24px !important; }
+.container{ width: 100% !important; max-width: 640px !important; margin: 0 auto !important; padding: 0 24px !important; }
 
 .funnel-header{ padding: 22px 0 !important; text-align: center !important; border-bottom: 1px solid rgba(255,255,255,.06) !important; }
 .funnel-header img{ height: 56px !important; width: auto !important; margin: 0 auto !important; }
@@ -34,18 +34,21 @@ em{
 
 .funnel-lead{ padding: 44px 0 28px !important; }
 .funnel-tail{ padding: 28px 0 90px !important; }
-.funnel-head{ text-align: center !important; max-width: 560px !important; margin: 0 auto 36px !important; }
-.badge-success{
-  display: inline-flex !important; align-items: center !important; gap: 8px !important;
-  padding: 8px 18px !important; border-radius: 999px !important; border: 1px solid #2a2419 !important;
-  background: rgba(201,150,47,.08) !important; color: #f2cf6b !important;
-  font-size: .74rem !important; letter-spacing: .06em !important; text-transform: uppercase !important; margin-bottom: 20px !important;
-}
-.funnel-head h1{ font-size: clamp(1.8rem, 4vw, 2.4rem) !important; margin-bottom: 14px !important; }
-.funnel-head p{ color: #b8b0a2 !important; font-size: .98rem !important; }
+.funnel-head{ text-align: center !important; margin: 0 auto 36px !important; }
+.funnel-head h1{ font-size: clamp(1.7rem, 4vw, 2.2rem) !important; margin-bottom: 12px !important; }
+.funnel-head p{ color: #b8b0a2 !important; font-size: .95rem !important; }
 
-.info-row{
-  display: flex !important; justify-content: center !important; gap: 30px !important; flex-wrap: wrap !important;
-  margin-top: 30px !important; font-size: .82rem !important; color: #b8b0a2 !important;
+.summary-card{
+  background: #17140f !important; border: 1px solid #2a2419 !important; border-radius: 18px !important;
+  padding: 24px 28px !important; margin-bottom: 24px !important;
+  display: flex !important; justify-content: space-between !important; align-items: center !important; gap: 16px !important;
 }
-.info-row strong{ display: block !important; color: #f2cf6b !important; font-size: .7rem !important; text-transform: uppercase !important; letter-spacing: .08em !important; margin-bottom: 4px !important; }
+.summary-card .label{ font-size: .7rem !important; text-transform: uppercase !important; letter-spacing: .1em !important; color: #7d7568 !important; display: block !important; margin-bottom: 6px !important; }
+.summary-card .val{ font-size: .98rem !important; font-weight: 500 !important; }
+.summary-card .amount{ font-family: 'Playfair Display', serif !important; font-style: italic !important; font-size: 1.7rem !important; color: #f2cf6b !important; }
+
+.trust-row{
+  display: flex !important; justify-content: center !important; gap: 26px !important; flex-wrap: wrap !important;
+  margin-top: 28px !important; font-size: .76rem !important; color: #7d7568 !important; letter-spacing: .02em !important;
+}
+.fine-print{ text-align: center !important; font-size: .76rem !important; color: #7d7568 !important; margin-top: 22px !important; max-width: 480px !important; margin-left: auto !important; margin-right: auto !important; }

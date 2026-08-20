@@ -2,7 +2,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- PASO 2 DE 4 · RESERVAR EL CURSO — PARTE A
+<!-- PASO 1 DE 3 · RESERVAR EL CURSO — PARTE A
      Cómo montar esta página en GHL, en orden:
      1) Añade un bloque Custom HTML y pega este archivo (Parte A).
      2) Justo debajo, añade un Row nuevo con el elemento Form de GHL.
@@ -15,14 +15,14 @@
         Para preseleccionar la formación según el botón pulsado en la landing:
           en ese campo, activa "Prefill from URL parameter" (o equivalente) y usa
           el parámetro "curso" — coincide con los enlaces de la landing (?curso=VIP, etc.)
-        En Form Settings > On Submit, configura redirección al Paso 3 (Pago).
+        En Form Settings > On Submit, configura redirección al Paso 2 (Pago).
         Estilo del Form (pestaña Styles del propio Form Builder): fondo #17140f,
         texto #f3efe7, acento dorado #c9962f, para que combine.
         Dale a ese Row: ancho de contenido 900px centrado (sin fondo/borde propio,
         el Form ya trae su tarjeta).
      3) Debajo de ese Row, añade otro bloque Custom HTML y pega
-        ghl-funnel-02-reservar-parteB.html (Parte B).
-     4) El CSS va aparte: pega ghl-funnel-02-reservar.css en el campo Custom CSS
+        ghl-funnel-01-reservar-parteB.html (Parte B).
+     4) El CSS va aparte: pega ghl-funnel-01-reservar.css en el campo Custom CSS
         de esta página de GHL (una sola vez). -->
 
 <header class="funnel-header">
@@ -30,8 +30,6 @@
 </header>
 
 <div class="progress">
-  <div class="progress-step done"><span class="progress-dot"></span>Información</div>
-  <span class="progress-line"></span>
   <div class="progress-step active"><span class="progress-dot"></span>Reservar</div>
   <span class="progress-line"></span>
   <div class="progress-step"><span class="progress-dot"></span>Pago</div>
