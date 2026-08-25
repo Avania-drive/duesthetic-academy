@@ -246,6 +246,19 @@ em{
 .technique-card h3{ font-size:1.05rem; margin-bottom:10px; color:var(--gold-2); }
 .technique-card p{ font-size:.88rem; color:var(--text-dim); }
 
+.techniques-note{
+  margin-top:32px;
+  padding:24px 28px;
+  background:var(--card);
+  border:1px solid var(--card-border);
+  border-left:3px solid var(--gold-1);
+  border-radius:var(--radius);
+  color:var(--text-dim);
+  font-size:.95rem;
+  line-height:1.65;
+}
+.techniques-note strong{ color:var(--text); }
+
 /* Steps / que incluye */
 .steps-grid{ display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start; }
 .steps-col{ display:flex; flex-direction:column; gap:30px; }
