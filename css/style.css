@@ -552,7 +552,6 @@ em{
 .legal-content li{ margin-bottom:6px; }
 .legal-content a{ color:var(--gold-2); text-decoration:underline; }
 .legal-content strong{ color:var(--text); }
-.legal-placeholder{ color:var(--gold-2); background:rgba(201,150,47,.14); padding:1px 6px; border-radius:4px; font-weight:600; }
 
 /* ---------- Responsive ---------- */
 /* El menú de 10 enlaces necesita más ancho que el resto de la grid para no
