@@ -50,8 +50,32 @@ document.querySelectorAll('.carousel-arrow').forEach(btn => {
   });
 });
 
-// Header shrink on scroll
-const header = document.getElementById('siteHeader');
-window.addEventListener('scroll', () => {
-  header.style.boxShadow = window.scrollY > 10 ? '0 8px 24px -12px rgba(0,0,0,.6)' : 'none';
+// Modal "Más información" (formulario GHL)
+const infoModal = document.getElementById('infoModal');
+const modalClose = document.getElementById('modalClose');
+
+function openInfoModal() {
+  infoModal?.classList.add('open');
+  infoModal?.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+}
+
+function closeInfoModal() {
+  infoModal?.classList.remove('open');
+  infoModal?.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+}
+
+document.querySelectorAll('.js-open-form').forEach(btn => {
+  btn.addEventListener('click', openInfoModal);
+});
+
+modalClose?.addEventListener('click', closeInfoModal);
+
+infoModal?.addEventListener('click', (e) => {
+  if (e.target === infoModal) closeInfoModal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeInfoModal();
 });

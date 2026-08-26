@@ -121,6 +121,18 @@ em{
   padding:12px 24px;
 }
 .logo img{ height:100px; width:auto; }
+.logo-float{
+  position:fixed;
+  top:16px;
+  left:80px;
+  z-index:200;
+}
+.logo-float img{ height:110px; }
+
+@media (max-width:600px){
+  .logo-float{ left:32px; }
+  .logo-float img{ height:80px; }
+}
 .main-nav{
   display:flex;
   align-items:center;
@@ -293,6 +305,7 @@ em{
 .course-head h3{ font-size:1.5rem; margin-bottom:4px; }
 .course-kicker{ font-size:.78rem; color:var(--gold-2); letter-spacing:.03em; }
 .course-card > p{ color:var(--text-dim); font-size:.92rem; margin:14px 0 22px; }
+.course-card .price-main{ display:block; margin:0 0 20px; }
 
 .course-meta{
   display:grid;
@@ -352,6 +365,7 @@ em{
   color:var(--text-dim);
   background:rgba(255,255,255,.02);
 }
+.center-pills{ justify-content:center; margin-top:28px; }
 .mono-card--featured{ margin-top:20px; }
 .mono-card--featured .course-actions{ display:flex; align-items:center; gap:18px; margin-top:20px; flex-wrap:wrap; }
 .mono-card--featured .btn-link{ margin-top:0; }
@@ -552,6 +566,61 @@ em{
 .legal-content li{ margin-bottom:6px; }
 .legal-content a{ color:var(--gold-2); text-decoration:underline; }
 .legal-content strong{ color:var(--text); }
+
+/* Modal: Más información (form GHL) */
+body.modal-open{ overflow:hidden; }
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:rgba(10,9,8,.82);
+  backdrop-filter:blur(6px);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .25s ease, visibility .25s ease;
+}
+.modal-overlay.open{ opacity:1; visibility:visible; }
+.modal-box{
+  position:relative;
+  width:100%;
+  max-width:520px;
+  max-height:90vh;
+  background:var(--card);
+  border:1px solid var(--card-border);
+  border-radius:var(--radius);
+  box-shadow:0 30px 60px -20px rgba(0,0,0,.7);
+  padding:22px;
+  transform:translateY(16px);
+  transition:transform .25s ease;
+}
+.modal-overlay.open .modal-box{ transform:translateY(0); }
+.modal-close{
+  position:absolute;
+  top:12px; right:12px;
+  width:34px; height:34px;
+  border-radius:50%;
+  border:1px solid var(--card-border);
+  background:var(--bg-alt);
+  color:var(--text);
+  font-size:1.3rem;
+  line-height:1;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:border-color .2s ease, color .2s ease;
+}
+.modal-close:hover{ border-color:var(--gold-1); color:var(--gold-2); }
+.modal-body{ width:100%; height:min(633px, 75vh); margin-top:6px; }
+
+@media (max-width:600px){
+  .modal-box{ padding:16px; }
+  .modal-body{ height:min(633px, 70vh); }
+}
 
 /* ---------- Responsive ---------- */
 /* El menú de 10 enlaces necesita más ancho que el resto de la grid para no
