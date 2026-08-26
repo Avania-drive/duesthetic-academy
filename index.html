@@ -13,10 +13,29 @@
 </head>
 <body>
 
-<!-- LOGO (sin barra superior) -->
-<a href="#top" class="logo logo-float">
-  <img src="assets/img/logo.png" alt="Duesthetic Academy">
-</a>
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#top" class="logo">
+      <img src="assets/img/logo.png" alt="Duesthetic Academy">
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#que-incluye">Qué incluye</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#monograficos">Monográficos</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#galeria">Galería</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#admision">Admisión</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
 <main id="top">
 
@@ -28,7 +47,8 @@
       <h1>La formación que define<br><em>tu futuro.</em></h1>
       <p class="hero-sub">La academia nº1 en formación práctica de armonización facial. Más de 50 ediciones en Madrid y 10 en Málaga. Más de 600 profesionales entrenados sobre pacientes reales.</p>
       <div class="hero-actions">
-        <button type="button" class="btn btn-gold js-open-form">Más información</button>
+        <a href="#cursos" class="btn btn-gold">Reservar mi plaza</a>
+        <a href="#experiencia" class="btn btn-outline">Ver la experiencia</a>
       </div>
       <div class="stat-row">
         <div class="stat-card">
@@ -47,91 +67,448 @@
     </div>
   </section>
 
-  <!-- RESUMEN: ARMONIZACIÓN FACIAL INTEGRAL -->
-  <section class="section" id="resumen">
+  <!-- ARMONIZACIÓN FACIAL INTEGRAL -->
+  <section class="section" id="tecnicas">
     <div class="container">
       <div class="section-head center">
-        <span class="eyebrow">Armonización Facial Integral</span>
-        <h2>Todas las técnicas, <em>un solo criterio</em></h2>
-        <p>Un programa que integra todas las técnicas clave de armonización facial, practicando siempre sobre pacientes reales en grupos reducidos de máximo 3 alumnos por camilla.</p>
+        <h2>Armonización Facial <em>Integral</em></h2>
+        <p>Un programa completo que integra todas las técnicas clave para una armonización facial. Te enseñaremos paso a paso, practicando con pacientes reales y grupos reducidos de máximo 3 alumnos por camilla.</p>
       </div>
-      <div class="pill-list center-pills">
-        <span class="pill">Ácido Hialurónico</span>
-        <span class="pill">Beauty Plan</span>
-        <span class="pill">Bioestimuladores de colágeno</span>
-        <span class="pill">Hilos PDO</span>
-        <span class="pill">Neuromoduladores</span>
-        <span class="pill">Lipolíticos</span>
-        <span class="pill">Mesoterapia</span>
-        <span class="pill">Polinucleótidos</span>
-        <span class="pill">Peelings químicos</span>
+      <div class="grid grid-3 techniques-grid">
+        <div class="card technique-card">
+          <h3>Ácido Hialurónico</h3>
+          <p>Aprenderás a dominar las principales técnicas con ácido hialurónico, sus indicaciones y la elección del producto adecuado para cada caso, trabajando planos de inyección, anatomía aplicada, técnicas con aguja y cánula y prevención de complicaciones para conseguir resultados seguros, naturales y personalizados.</p>
+        </div>
+        <div class="card technique-card">
+          <h3>Beauty Plan</h3>
+          <p>Aprenderás a realizar una valoración facial completa, identificando las necesidades y prioridades de cada paciente para diseñar un plan de tratamiento personalizado. Sabrás qué tratar, con qué producto y mediante qué técnica, estableciendo un orden de actuación para conseguir los mejores resultados.</p>
+        </div>
+        <div class="card technique-card">
+          <h3>Bioestimuladores de colágeno</h3>
+          <p>Aprenderás a trabajar con los principales bioestimuladores de colágeno, como la hidroxiapatita de calcio y el ácido poliláctico. Dominarás sus indicaciones, diluciones, planos y técnicas de aplicación, así como su combinación en tratamientos híbridos con otros productos para diseñar protocolos personalizados.</p>
+        </div>
+        <div class="card technique-card">
+          <h3>Hilos PDO: monofilamento lisos y Espiculados</h3>
+          <p>Aprenderás a trabajar con hilos PDO espiculados y monofilamento, conociendo sus diferentes indicaciones, vectores, planos y técnicas de colocación. Desde la bioestimulación y mejora de la calidad cutánea hasta técnicas de tracción, lifting y reposicionamiento de tejidos.</p>
+        </div>
+        <div class="card technique-card">
+          <h3>Neuromoduladores</h3>
+          <p>Dominarás la anatomía y función de la musculatura facial. Trabajaremos con protocolos, puntos de tratamiento, dosificación y diferentes abordajes para trabajar con seguridad.</p>
+        </div>
+        <div class="card technique-card">
+          <h3>Lipolíticos</h3>
+          <p>Aprenderás a diferenciar entre lipolíticos directos e indirectos, comprendiendo sus mecanismos de acción, indicaciones y selección según cada caso, así como las principales técnicas y zonas de aplicación.</p>
+        </div>
+        <div class="card technique-card">
+          <h3>Mesoterapia</h3>
+          <p>Realizaremos tratamientos de mesoterapia facial y capilar, conociendo los diferentes productos disponibles, sus indicaciones y cómo elegirlos según las necesidades de cada paciente. Trabajaremos técnicas de aplicación, combinaciones y protocolos para abordar diferentes objetivos estéticos.</p>
+        </div>
+        <div class="card technique-card">
+          <h3>Polinucleótidos</h3>
+          <p>Bioregeneración profunda que mejora firmeza, elasticidad y calidad cutánea.</p>
+        </div>
+        <div class="card technique-card">
+          <h3>Peelings Químicos</h3>
+          <p>Renovación cutánea con protocolos seguros adaptados a cada tipo de piel.</p>
+        </div>
+      </div>
+
+      <p class="techniques-note">El temario cubre todas estas técnicas. La práctica la haces sobre los pacientes reales que entran en la jornada clínica: más de 10 por alumno, desde un labio hasta un full face. No eliges tú lo que llega, igual que no lo eliges en tu consulta. Por eso lo que te llevas no es una técnica: es <strong>criterio para valorar cualquier cara que se te siente delante</strong>.</p>
+    </div>
+  </section>
+
+  <!-- QUÉ INCLUYE -->
+  <section class="section section-alt" id="que-incluye">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Qué incluye</span>
+        <h2>Tu formación, <em>paso a paso</em></h2>
+        <p>Desde la reserva hasta la jornada clínica, con todo incluido.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="steps-col">
+          <div class="step">
+            <span class="step-num">01</span>
+            <div>
+              <span class="step-tag">Información</span>
+              <h3>Agenda tu llamada</h3>
+              <p>Recibe toda la información sobre la formación y resuelve tus dudas en una llamada personalizada con nuestro equipo. Te explicaremos el programa, metodología, fechas, sedes y modalidades disponibles antes de realizar tu reserva.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">02</span>
+            <div>
+              <span class="step-tag">Reserva</span>
+              <h3>Acceso Academy</h3>
+              <p>Reserva tu plaza con 500 € y accede desde ese momento al temario teórico online. Abono de los 1.000 € restantes hasta 3 semanas antes del curso, con diferentes modalidades de pago disponibles.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">03</span>
+            <div>
+              <span class="step-tag">Preparación</span>
+              <h3>Comunidad del curso</h3>
+              <p>Accede a nuestro grupo privado de WhatsApp, donde podrás resolver dudas, recibir indicaciones y coordinar toda la logística antes de la formación.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">04</span>
+            <div>
+              <span class="step-tag">Formación</span>
+              <h3>Jornada Clínica</h3>
+              <p>Vive una inmersión práctica con pacientes reales en nuestras sedes de Madrid y Málaga, aplicando los conocimientos adquiridos bajo supervisión docente.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="steps-col info-cards">
+          <div class="card info-card">
+            <h4>Todo incluido</h4>
+            <p>Materiales, pacientes, seguro RC y soporte post-curso ilimitado.</p>
+          </div>
+          <div class="card info-card">
+            <h4>Base jurídica</h4>
+            <p>Protocolos alineados al Reglamento Europeo 2022/2346 para tu seguridad.</p>
+          </div>
+          <div class="card info-card">
+            <h4>Título Academy</h4>
+            <p>Título Propio de Capacitación Duesthetic. Acreditación universitaria opcional (15% adicional sobre el precio): 2 créditos ECTS oficiales, válidos para baremos públicos.</p>
+          </div>
+          <div class="card info-card">
+            <h4>Sin experiencia previa</h4>
+            <p>Adaptado a profesionales de la salud (médicos, enfermeros y odontólogos) sin experiencia o para quienes quieren mejorar o perfeccionar sus técnicas. Siempre con un enfoque de aprendizaje seguro y paso a paso.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FORMACIÓN -->
-  <section class="section section-alt" id="cursos">
+  <!-- CURSOS -->
+  <section class="section" id="cursos">
     <div class="container">
       <div class="section-head center">
         <span class="eyebrow">Elige tu formación</span>
-        <h2>Tres formatos, <em>un mismo nivel</em></h2>
-        <p>Grupal, VIP one-to-one o monográfico por técnica: tú eliges cómo formarte.</p>
+        <h2>Nuestros <em>Cursos</em></h2>
+        <p>Dos formatos para dominar la armonización facial: en grupo reducido o de forma totalmente personalizada.</p>
       </div>
 
-      <div class="grid grid-3">
+      <div class="grid grid-2 courses-grid">
         <div class="card course-card">
-          <h3>Curso Grupal</h3>
-          <p>Formación intensiva de fin de semana, práctica sobre pacientes reales. Máx. 3 alumnos por camilla.</p>
-          <span class="price-main">1.500€</span>
-          <button type="button" class="btn btn-gold btn-block js-open-form">Más información</button>
+          <div class="course-head">
+            <h3>Curso Grupal</h3>
+            <span class="course-kicker">Armonización Facial Integral</span>
+          </div>
+          <p>Formación práctica intensiva diseñada para replicar la dinámica de una consulta de alto nivel. Dirigida a médicos, odontólogos y enfermeras, que buscan dominar la práctica real en técnicas de Armonización facial.</p>
+
+          <div class="course-meta">
+            <div>
+              <span class="meta-label">Horario de bloque</span>
+              <span class="meta-val">Sábado 10:00 – 20:00<br>Domingo 10:00 – 15:00</span>
+              <span class="meta-note">(Comida incluida 14:00 a 15:45)</span>
+            </div>
+            <div>
+              <span class="meta-label">Metodología Academy</span>
+              <span class="meta-val">3 alumnos por camilla</span>
+              <span class="meta-note">Práctica sobre modelos reales</span>
+            </div>
+          </div>
+
+          <div class="course-includes">
+            <span class="meta-label">¿Qué incluye tu formación?</span>
+            <ul class="check-list">
+              <li>Materiales &amp; insumos</li>
+              <li>Pacientes reales</li>
+              <li>Seguro RC</li>
+              <li>Diploma acreditativo</li>
+              <li>Soporte postformación</li>
+            </ul>
+            <span class="meta-note">Espacio, material y acompañamiento profesional para tus inicios (consulta condiciones).</span>
+          </div>
+
+          <div class="course-price">
+            <div>
+              <span class="price-main">1.500€</span>
+              <span class="price-note">Reserva: 500€ · Pendiente: 1.000€</span>
+            </div>
+            <span class="price-tag">Plazas limitadas</span>
+          </div>
+
+          <div class="course-actions">
+            <a href="#admision" class="btn btn-gold btn-block">Reservar</a>
+            <a href="#admision" class="btn-link">Agendar una llamada con los formadores</a>
+          </div>
         </div>
 
         <div class="card course-card course-card--vip">
-          <h3>VIP One-to-One</h3>
-          <p>Un docente dedicado íntegramente a ti en una jornada intensiva de 8h, con la técnica a tu elección.</p>
-          <span class="price-main">2.000€</span>
-          <button type="button" class="btn btn-gold btn-block js-open-form">Más información</button>
-        </div>
+          <div class="course-head">
+            <h3>VIP</h3>
+            <span class="course-kicker">Formación Monográfica / One-to-One</span>
+          </div>
+          <p>La experiencia más exclusiva. Un docente dedicado íntegramente a ti en una jornada intensiva de 8h para perfeccionar las técnicas a tu elección.</p>
 
-        <div class="card course-card">
-          <h3>Monográficos</h3>
-          <p>¿Solo quieres dominar una técnica? Jornada 100% práctica sobre pacientes reales.</p>
-          <span class="price-main">1.000€ / edición</span>
-          <button type="button" class="btn btn-gold btn-block js-open-form">Más información</button>
+          <div class="course-meta">
+            <div>
+              <span class="meta-label">Horario intensivo</span>
+              <span class="meta-val">Viernes 10:00–14:00<br>y 16:00–20:00</span>
+              <span class="meta-note">(Pausa comida 14h–16h)</span>
+            </div>
+            <div>
+              <span class="meta-label">Modalidad one-to-one</span>
+              <span class="meta-val">1 alumno · hasta 2 técnicas</span>
+              <span class="meta-note">Materiales y modelos incluidos</span>
+            </div>
+          </div>
+
+          <div class="course-includes">
+            <span class="meta-label">Ventajas VIP Academy</span>
+            <ul class="check-list">
+              <li>Horario flexible</li>
+              <li>Técnica a la carta</li>
+              <li>Seguro incluido</li>
+            </ul>
+          </div>
+
+          <div class="course-price">
+            <div>
+              <span class="price-old">2.500€</span>
+              <span class="price-main">2.000€</span>
+              <span class="price-note">2 pagos</span>
+            </div>
+            <span class="price-tag price-tag--gold">Exclusivo</span>
+          </div>
+
+          <div class="course-actions">
+            <a href="#admision" class="btn btn-gold btn-block">Reservar</a>
+            <a href="#admision" class="btn-link">Agendar una llamada con los formadores</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIOS -->
-  <section class="section" id="testimonios">
+  <!-- MONOGRÁFICOS -->
+  <section class="section section-alt" id="monograficos">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Formación a la carta</span>
+        <h2>Cursos por <em>técnica individual</em></h2>
+        <p>¿Solo quieres dominar una técnica concreta? Monográficos intensivos de un día, 100% prácticos sobre pacientes reales. Tú eliges la técnica; nosotros ponemos materiales, modelos y docente.</p>
+      </div>
+
+      <div class="price-bar">
+        <div>
+          <span class="meta-label">Precio</span>
+          <span class="meta-val">1.000€ / edición</span>
+        </div>
+        <div>
+          <span class="meta-label">Formato</span>
+          <span class="meta-val">4h / 8h en pareja</span>
+        </div>
+        <div>
+          <span class="meta-label">Horario a elegir</span>
+          <span class="meta-val">10–14 / 16–20</span>
+        </div>
+        <div>
+          <span class="meta-label">Profesiones</span>
+          <span class="meta-val">Medicina · Odontología · Enfermería</span>
+        </div>
+      </div>
+
+      <div class="grid grid-2 monografico-grid">
+        <div class="card mono-card">
+          <h3>Microneedling &amp; Peeling</h3>
+          <p>Identifica cada tipo de piel y aplica los distintos peelings con protocolos seguros y resultados efectivos.</p>
+          <span class="meta-label">Contenido</span>
+          <div class="pill-list">
+            <span class="pill">Anamnesis</span>
+            <span class="pill">Peeling estético</span>
+            <span class="pill">Protocolos</span>
+          </div>
+        </div>
+        <div class="card mono-card">
+          <h3>Ácido Hialurónico</h3>
+          <p>Domina las técnicas de inyección y los tipos de ácido hialurónico según su reticulación, con sus indicaciones clínicas.</p>
+          <span class="meta-label">Zonas de trabajo</span>
+          <div class="pill-list">
+            <span class="pill">Tercio superior</span>
+            <span class="pill">Pómulos</span>
+          </div>
+        </div>
+        <div class="card mono-card">
+          <h3>Mesoterapia Facial &amp; Capilar</h3>
+          <p>Trabaja con Dermapen y microneedling para el rejuvenecimiento cutáneo y la estimulación capilar, con técnicas seguras y efectivas.</p>
+        </div>
+        <div class="card mono-card">
+          <h3>Bioestimuladores de Colágeno</h3>
+          <p>Conoce los tipos de bioestimuladores, sus indicaciones y la técnica de aplicación para promover la producción natural de colágeno.</p>
+          <span class="meta-label">Productos &amp; activos</span>
+          <div class="pill-list">
+            <span class="pill">Hidroxiapatita de Calcio</span>
+            <span class="pill">Ácido Poliláctico (Sculptra)</span>
+            <span class="pill">Polinucleótidos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mono-card mono-card--featured">
+        <h3>Toxina Botulínica</h3>
+        <p>Aprende la dosificación, planos de inyección y puntos precisos de aplicación para tratar arrugas dinámicas y afecciones funcionales.</p>
+        <span class="meta-label">Zonas de trabajo</span>
+        <div class="pill-list">
+          <span class="pill">Tercio superior (frente, entrecejo y patas de gallo)</span>
+          <span class="pill">Sonrisa gingival</span>
+          <span class="pill">Masetero y perfilado mandibular</span>
+          <span class="pill">Nefertiti / lifting mandibular</span>
+        </div>
+        <div class="course-actions">
+          <a href="#admision" class="btn btn-gold">Reservar</a>
+          <a href="#admision" class="btn-link">Agendar una llamada con los formadores</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section class="section" id="experiencia">
     <div class="container">
       <div class="section-head center">
         <span class="eyebrow">Vive la Academia</span>
-        <h2>Lo que cuentan <em>nuestros alumnos</em></h2>
-        <p>Formación práctica sobre modelos reales en un entorno clínico de alto nivel. Desliza para ver más.</p>
+        <h2>Cómo se vive la <em>experiencia</em></h2>
+        <p>Formación práctica sobre modelos reales en un entorno clínico de alto nivel. Desliza y toca para ver.</p>
       </div>
 
-      <div class="carousel" id="testimonialsCarousel">
-        <button class="carousel-arrow prev" data-target="testimonialsCarousel" aria-label="Anterior">&#10094;</button>
+      <div class="carousel" id="experienceCarousel">
+        <button class="carousel-arrow prev" data-target="experienceCarousel" aria-label="Anterior">&#10094;</button>
         <div class="carousel-track">
           <div class="phone-card"><video src="assets/videos/t2.mp4" muted loop playsinline controls></video></div>
           <div class="phone-card"><video src="assets/videos/t3.mp4" muted loop playsinline controls></video></div>
           <div class="phone-card"><video src="assets/videos/t4.mp4" muted loop playsinline controls></video></div>
           <div class="phone-card"><video src="assets/videos/t5.mp4" muted loop playsinline controls></video></div>
         </div>
+        <button class="carousel-arrow next" data-target="experienceCarousel" aria-label="Siguiente">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section class="section section-alt" id="equipo">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Quién te forma</span>
+        <h2>Equipo <em>Docente</em></h2>
+        <p>Formación liderada por docentes con amplia experiencia nacional e internacional.</p>
+      </div>
+
+      <div class="grid grid-4 team-grid">
+        <div class="card team-card">
+          <div class="avatar-ring"></div>
+          <h3>D. José Alberto Truzman Cohen</h3>
+          <span class="team-role">CEO · Fundador de Duesthetic</span>
+          <p>CEO y Fundador de Duesthetic Academy. Director Académico de Formación Avanzada en Medicina Estética y Máster en Armonización Odontoestética. Experto en Salud Pública, formando a profesionales sanitarios en técnicas avanzadas de armonización facial, combinando evidencia científica, seguridad clínica y excelencia asistencial.</p>
+        </div>
+        <div class="card team-card">
+          <div class="avatar-ring"></div>
+          <h3>D. José Miguel Sánchez Sánchez-Ajofrín</h3>
+          <span class="team-role">COO · Coordinador Universitario</span>
+          <p>Fundador de Duesthetic. Docente de Máster Universitario avalado por la Universidad de Vitoria (EUNEIZ). Especializado en técnicas avanzadas de armonización facial y en la formación de profesionales sanitarios a nivel internacional.</p>
+        </div>
+        <div class="card team-card">
+          <div class="avatar-ring"></div>
+          <h3>Tania Imbroda Goyanes</h3>
+          <span class="team-role">Directora de Duesthetic</span>
+          <p>Formada en el Máster Universitario en Dermocosmética y Medicina Estética. Más de 10 años dedicados a la armonización facial, especializada en el cuidado avanzado de la piel, técnicas y estrategias antiaging de vanguardia.</p>
+        </div>
+        <div class="card team-card">
+          <div class="avatar-ring"></div>
+          <h3>Dra. Tania Quevedo</h3>
+          <span class="team-role">Colaboradora Medicina Estética</span>
+          <p>Especialista en medicina estética y traumatología de la columna vertebral. Referente en tratamientos innovadores y seguros, escuchando a cada paciente para crear un plan de tratamiento personalizado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="section" id="galeria">
+    <div class="container">
+      <div class="section-head center">
+        <h2>Galería</h2>
+        <p>Momentos reales de nuestras formaciones y resultados.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item--wide"><img src="assets/img/gallery/g10.jpg" alt="Sesión práctica de armonización facial en grupo" loading="lazy"><span class="gallery-caption">Formación Duesthetic</span></div>
+        <div class="gallery-item"><img src="assets/img/gallery/g19.jpg" alt="Alumno Duesthetic Academy" loading="lazy"><span class="gallery-caption">Formación Duesthetic</span></div>
+        <div class="gallery-item"><img src="assets/img/gallery/g06.jpg" alt="Docente aplicando técnica de armonización facial" loading="lazy"><span class="gallery-caption">Formación Duesthetic</span></div>
+        <div class="gallery-item"><img src="assets/img/gallery/g08.jpg" alt="Docente Duesthetic realizando una infiltración" loading="lazy"><span class="gallery-caption">Formación Duesthetic</span></div>
+        <div class="gallery-item"><video src="assets/videos/t3.mp4" muted loop playsinline autoplay></video><span class="gallery-caption">Formación Duesthetic</span></div>
+        <div class="gallery-item gallery-item--wide"><video src="assets/videos/t5.mp4" muted loop playsinline autoplay></video><span class="gallery-caption">Formación Duesthetic</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="section section-alt" id="testimonios">
+    <div class="container">
+      <div class="section-head center">
+        <h2>Testimonios</h2>
+        <p>Lo que cuentan nuestros alumnos. Desliza para ver más.</p>
+      </div>
+
+      <div class="carousel" id="testimonialsCarousel">
+        <button class="carousel-arrow prev" data-target="testimonialsCarousel" aria-label="Anterior">&#10094;</button>
+        <div class="carousel-track">
+          <div class="phone-card">
+            <video src="assets/videos/t2.mp4" muted loop playsinline controls></video>
+            <span class="phone-caption">¡Mira lo que opinan nuestros alumnos!</span>
+          </div>
+          <div class="phone-card"><video src="assets/videos/t3.mp4" muted loop playsinline controls></video></div>
+          <div class="phone-card"><video src="assets/videos/t4.mp4" muted loop playsinline controls></video></div>
+          <div class="phone-card"><video src="assets/videos/t5.mp4" muted loop playsinline controls></video></div>
+          <div class="phone-card"><video src="assets/videos/t6.mp4" muted loop playsinline controls></video></div>
+          <div class="phone-card"><video src="assets/videos/t7.mp4" muted loop playsinline controls></video></div>
+        </div>
         <button class="carousel-arrow next" data-target="testimonialsCarousel" aria-label="Siguiente">&#10095;</button>
       </div>
     </div>
   </section>
 
-  <!-- CONTACTO / UBICACIONES -->
-  <section class="section section-alt" id="admision">
+  <!-- ADMISIÓN -->
+  <section class="section" id="admision">
     <div class="container">
       <div class="admission-top card">
-        <h2>¿Quieres más información?</h2>
-        <p>Resuelve tus dudas y consulta la disponibilidad de la próxima edición en Madrid o Málaga.</p>
-        <button type="button" class="btn btn-gold js-open-form">Más información</button>
+        <h2>Solicita tu Plaza</h2>
+        <p>Elige cómo seguir: <strong>reserva tu plaza</strong> y consulta la disponibilidad de la próxima edición, o <strong>habla con un experto</strong> para resolver cualquier duda técnica antes de decidir.</p>
+        <div class="admission-options">
+          <div class="admission-option">
+            <span class="meta-label">Atención telefónica</span>
+            <span class="meta-val">L–J de 10:00 a 20:00</span>
+            <a href="#" class="btn btn-gold">Reservar</a>
+          </div>
+          <div class="admission-option">
+            <span class="meta-label">Soporte directo</span>
+            <span class="meta-val"><a href="mailto:info@duesthetic.es">info@duesthetic.es</a></span>
+            <a href="mailto:info@duesthetic.es" class="btn btn-outline">Consultar con un experto</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="admission-bottom card">
+        <span class="eyebrow center">Llamadas de admisión: Lunes a Jueves</span>
+        <div class="hours-row">
+          <div class="hours-card">
+            <span class="meta-label">Mañana</span>
+            <span class="meta-val">10:00 — 14:00</span>
+          </div>
+          <div class="hours-card">
+            <span class="meta-label">Tarde</span>
+            <span class="meta-val">16:00 — 20:00</span>
+          </div>
+        </div>
+        <p class="center">Agenda una llamada con nuestros formadores para resolver tus dudas técnicas antes de decidir.</p>
+        <div class="center">
+          <a href="#" class="btn btn-gold">Agendar Llamada</a>
+        </div>
 
         <div class="locations-row">
           <div class="location-card">
@@ -153,6 +530,76 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="section section-alt" id="faq">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Resolvemos tus dudas</span>
+        <h2>Preguntas <em>frecuentes</em></h2>
+        <p>Lo que más preguntan los alumnos antes de reservar su plaza.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">¿Qué tipo de curso es? <span class="faq-icon">＋</span></button>
+          <div class="faq-answer"><p>Es una formación 100% práctica de armonización facial, disponible en formato grupal, VIP one-to-one o monográfico por técnica. El temario teórico cubre todas las técnicas; la práctica clínica la haces sobre los pacientes reales que entran ese día, no sobre una lista cerrada de técnicas.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Cuántos alumnos hay por edición? <span class="faq-icon">＋</span></button>
+          <div class="faq-answer"><p>Trabajamos en grupos reducidos, con un máximo de 3 alumnos por camilla, para garantizar una atención cercana y práctica real sobre modelos.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Necesito experiencia previa? <span class="faq-icon">＋</span></button>
+          <div class="faq-answer"><p>No. Nuestra formación está adaptada tanto a profesionales sin experiencia como a quienes quieran perfeccionar sus técnicas, siempre con un enfoque seguro y paso a paso.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Qué incluye el precio? <span class="faq-icon">＋</span></button>
+          <div class="faq-answer"><p>Materiales e insumos, pacientes/modelos reales, seguro de responsabilidad civil, diploma acreditativo y soporte post-curso ilimitado.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Cómo se reserva la plaza? <span class="faq-icon">＋</span></button>
+          <div class="faq-answer"><p>Con un depósito de 500€ confirmas tu plaza. El resto del importe se abona por transferencia hasta 3 semanas antes del inicio del curso.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Qué pasa si no puedo asistir tras reservar? <span class="faq-icon">＋</span></button>
+          <div class="faq-answer"><p>Contáctanos con la mayor antelación posible: estudiamos cada caso para ofrecerte el cambio de edición o la solución que mejor se ajuste.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Cuándo recibo el temario? <span class="faq-icon">＋</span></button>
+          <div class="faq-answer"><p>Tras confirmar tu reserva, accedes a la Comunidad VIP y recibes el temario y el material teórico antes del inicio del curso.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Puedo resolver dudas antes del curso? <span class="faq-icon">＋</span></button>
+          <div class="faq-answer"><p>Sí, puedes agendar una llamada con nuestros formadores para resolver cualquier duda técnica antes de decidir o antes de comenzar la formación.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Qué tengo que llevar? <span class="faq-icon">＋</span></button>
+          <div class="faq-answer"><p>Solo necesitas traer tu bata/uniforme profesional. Todo el material clínico, insumos y productos están incluidos.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Se entrega certificado? <span class="faq-icon">＋</span></button>
+          <div class="faq-answer"><p>Sí, recibes el Título Propio de Capacitación Duesthetic. Existe la opción de acreditación universitaria con 2 créditos ECTS oficiales.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Hay soporte después del curso? <span class="faq-icon">＋</span></button>
+          <div class="faq-answer"><p>Sí, todos los alumnos cuentan con soporte post-curso ilimitado a través de nuestra comunidad y formadores.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Puedo traer un modelo o paciente? <span class="faq-icon">＋</span></button>
+          <div class="faq-answer"><p>En algunas ediciones es posible; consúltalo con el equipo de admisión según el curso y la disponibilidad de la sede.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Hay limitaciones legales según la profesión? <span class="faq-icon">＋</span></button>
+          <div class="faq-answer"><p>La aplicación de cada técnica está sujeta a las limitaciones legales correspondientes según la titulación del alumno (Medicina, Odontología o Enfermería).</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Puedo pedir factura? <span class="faq-icon">＋</span></button>
+          <div class="faq-answer"><p>Sí, emitimos factura a nombre propio o de tu clínica/empresa. Solicítalo al equipo de admisión al formalizar tu reserva.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <!-- FOOTER -->
@@ -162,6 +609,8 @@
     <span class="footer-tagline">Duesthetic Academy Excellence</span>
     <span class="footer-sub">Inspirando la excelencia clínica © 2026</span>
     <div class="footer-links">
+      <a href="#">Guía del alumno</a>
+      <span class="dot">·</span>
       <a href="aviso-legal.html">Aviso legal</a>
       <span class="dot">·</span>
       <a href="privacidad.html">Política de privacidad</a>
@@ -170,54 +619,6 @@
     </div>
   </div>
 </footer>
-
-<!-- MODAL: Más información (formulario GHL) -->
-<div class="modal-overlay" id="infoModal" aria-hidden="true">
-  <div class="modal-box" role="dialog" aria-modal="true" aria-label="Formulario de más información">
-    <button type="button" class="modal-close" id="modalClose" aria-label="Cerrar">&times;</button>
-    <div class="modal-body">
-      <iframe
-        src="https://app.duesthetic.com/widget/form/x5rqinJeVXbxIOludYLh"
-        style="width:100%;height:100%;border:none;border-radius:8px"
-        id="inline-x5rqinJeVXbxIOludYLh"
-        data-layout="{'id':'INLINE'}"
-        data-trigger-type="alwaysShow"
-        data-trigger-value=""
-        data-activation-type="alwaysActivated"
-        data-activation-value=""
-        data-deactivation-type="neverDeactivate"
-        data-deactivation-value=""
-        data-form-name="[FORM] Reserva"
-        data-height="633"
-        data-layout-iframe-id="inline-x5rqinJeVXbxIOludYLh"
-        data-form-id="x5rqinJeVXbxIOludYLh"
-        title="[FORM] Reserva"
-      ></iframe>
-    </div>
-  </div>
-</div>
-
-<!-- POPUP GHL (auto-apertura gestionada por GHL, independiente del modal de arriba) -->
-<iframe
-    src="https://app.duesthetic.com/widget/form/x5rqinJeVXbxIOludYLh"
-    style="display:none;width:100%;height:100%;border:none;border-radius:8px"
-    id="popup-x5rqinJeVXbxIOludYLh"
-    data-layout="{'id':'POPUP'}"
-    data-trigger-type="alwaysShow"
-    data-trigger-value=""
-    data-activation-type="alwaysActivated"
-    data-activation-value=""
-    data-deactivation-type="neverDeactivate"
-    data-deactivation-value=""
-    data-form-name="[FORM] Reserva"
-    data-height="599"
-    data-layout-iframe-id="popup-x5rqinJeVXbxIOludYLh"
-    data-form-id="x5rqinJeVXbxIOludYLh"
-    title="[FORM] Reserva"
-    data-modal-height="500"
-        >
-</iframe>
-<script src="https://app.duesthetic.com/js/form_embed.js"></script>
 
 <script src="js/script.js"></script>
 </body>
