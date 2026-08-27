@@ -20,16 +20,13 @@
      4) El CSS va aparte: pega ghl-reserva-pago.css en el campo Custom
         CSS de esta página de GHL (una sola vez).
 
-     ESTILO DEL ORDER FORM (pestaña Style del propio elemento, para que
-     no desentone con el resto del funnel):
-       - Fondo del formulario: #17140f
-       - Borde: 1px solid #2a2419, radio 18px
-       - Texto / labels: #f3efe7 (texto) · #b8b0a2 (labels)
-       - Fondo de los inputs: #100e0c · borde #2a2419 · radio 12px
-       - Botón de pago: fondo #c9962f (o el degradado si lo permite:
-         linear-gradient(120deg, #a9781f, #f2cf6b, #c9962f)), texto
-         #1a1305, radio 999px
-       - Fuente: Poppins -->
+     ESTILO DEL ORDER FORM: ya viene resuelto en ghl-reserva-pago.css,
+     dirigido directamente al ID real que genera GHL para este elemento
+     (#one-step-order-hEKnXYR5rg). Si borras y vuelves a crear el Order
+     Form, GHL puede generar un ID distinto — inspecciona el elemento y
+     actualiza ese selector en el CSS si no coincide. Los campos de
+     tarjeta los renderiza Stripe en un iframe propio (PCI-DSS) y no se
+     pueden estilizar desde aquí, solo el contenedor/labels/botón. -->
 
 <!-- LOGO (flotante, sin barra superior) -->
 <a href="#top" class="logo logo-float">

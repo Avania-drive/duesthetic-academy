@@ -125,3 +125,68 @@ em{
   .funnel-lead{ padding-top: 120px !important; }
   .summary-card{ flex-direction: column !important; align-items: flex-start !important; gap: 8px !important; }
 }
+
+/* ---------- Order Form nativo de GHL ----------
+   #one-step-order-hEKnXYR5rg es el ID real que genera GHL para este
+   elemento. Si en algún momento borras y vuelves a crear el Order Form,
+   revisa el ID (inspecciona el elemento) y actualízalo aquí si cambia.
+   Los campos de tarjeta (número/caducidad/CVC) los renderiza Stripe
+   dentro de un iframe propio por PCI-DSS: ese iframe NO se puede
+   estilizar desde aquí, solo el contenedor, labels y botón. */
+#one-step-order-hEKnXYR5rg{
+  max-width: 560px !important;
+  margin: 0 auto !important;
+  background: #17140f !important;
+  border: 1px solid #2a2419 !important;
+  border-radius: 18px !important;
+  padding: 28px !important;
+  color: #f3efe7 !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+#one-step-order-hEKnXYR5rg h1,
+#one-step-order-hEKnXYR5rg h2,
+#one-step-order-hEKnXYR5rg h3,
+#one-step-order-hEKnXYR5rg h4{
+  color: #f3efe7 !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+#one-step-order-hEKnXYR5rg p,
+#one-step-order-hEKnXYR5rg span,
+#one-step-order-hEKnXYR5rg div{ color: #b8b0a2 !important; }
+#one-step-order-hEKnXYR5rg label{
+  color: #b8b0a2 !important;
+  font-size: .78rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: .06em !important;
+}
+#one-step-order-hEKnXYR5rg input,
+#one-step-order-hEKnXYR5rg select,
+#one-step-order-hEKnXYR5rg textarea{
+  background: #100e0c !important;
+  border: 1px solid #2a2419 !important;
+  border-radius: 12px !important;
+  color: #f3efe7 !important;
+  padding: 12px 14px !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+#one-step-order-hEKnXYR5rg input::placeholder{ color: #7d7568 !important; }
+#one-step-order-hEKnXYR5rg input:focus,
+#one-step-order-hEKnXYR5rg select:focus,
+#one-step-order-hEKnXYR5rg textarea:focus{
+  border-color: #c9962f !important;
+  outline: none !important;
+}
+#one-step-order-hEKnXYR5rg button,
+#one-step-order-hEKnXYR5rg button[type="submit"],
+#one-step-order-hEKnXYR5rg input[type="submit"]{
+  background: linear-gradient(120deg, #a9781f 0%, #f2cf6b 45%, #c9962f 100%) !important;
+  color: #1a1305 !important;
+  border: none !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  font-family: 'Poppins', sans-serif !important;
+  padding: 14px 30px !important;
+  width: 100% !important;
+  cursor: pointer !important;
+}
+#one-step-order-hEKnXYR5rg hr{ border-color: #2a2419 !important; }
