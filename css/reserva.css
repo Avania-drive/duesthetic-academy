@@ -90,7 +90,6 @@ em{
 }
 .btn-gold:hover{ transform:translateY(-2px); box-shadow:0 14px 34px -10px rgba(201,150,47,.6); }
 .btn-lg{ padding:16px 38px; font-size:.98rem; }
-.btn-block{ width:100%; }
 
 /* ---------- Logo flotante ---------- */
 .logo-float{
@@ -191,9 +190,6 @@ em{
 }
 .video-placeholder-label{ font-size:.92rem; font-weight:600; color:var(--text); }
 .video-placeholder-note{ font-size:.76rem; color:var(--text-faint); max-width:400px; }
-
-.testimonial-frame,
-.closing-frame{ max-width:640px; }
 
 /* ---------- Sections ---------- */
 .section{ padding:88px 0; }
@@ -333,49 +329,6 @@ em{
 .phase-card .check-list{ margin:0; max-width:none; }
 .phase-card .check-list li{ font-size:.88rem; }
 
-/* ---------- Oferta ---------- */
-.offer-card{
-  max-width:640px;
-  margin:0 auto;
-  text-align:center;
-  padding:44px;
-}
-.offer-card .price-main{
-  display:block;
-  font-family:var(--font-accent);
-  font-style:italic;
-  font-size:2.6rem;
-  color:var(--gold-2);
-  margin-bottom:18px;
-}
-.offer-includes{ color:var(--text-dim); font-size:.92rem; margin-bottom:28px; }
-
-.offer-payment-row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:16px;
-  padding:20px 0;
-  border-top:1px solid var(--card-border);
-  border-bottom:1px solid var(--card-border);
-  margin-bottom:16px;
-}
-.offer-payment{ display:flex; flex-direction:column; gap:4px; }
-.meta-label{ font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; color:var(--text-faint); }
-.meta-val{ font-family:var(--font-accent); font-style:italic; font-size:1.4rem; color:var(--gold-2); }
-.meta-note{ font-size:.76rem; color:var(--text-faint); }
-
-.offer-note{ font-size:.8rem; color:var(--text-faint); margin-bottom:24px; }
-
-.offer-dates{
-  display:flex;
-  justify-content:center;
-  gap:24px;
-  flex-wrap:wrap;
-  font-size:.85rem;
-  color:var(--text-dim);
-  margin:24px 0;
-}
-
 /* ---------- FAQ / Objeciones ---------- */
 .faq-list{ max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:12px; }
 .faq-item{
@@ -405,17 +358,6 @@ em{
 .faq-answer{ max-height:0; overflow:hidden; transition:max-height .3s ease; }
 .faq-answer p{ padding:0 22px 20px; color:var(--text-dim); font-size:.88rem; line-height:1.7; }
 
-/* ---------- Cierre ---------- */
-.closing-card{
-  max-width:760px;
-  margin:0 auto;
-  text-align:center;
-  padding:44px;
-}
-.closing-card .video-frame{ margin-bottom:32px; }
-.closing-card h2{ font-size:clamp(1.4rem, 3vw, 1.9rem); line-height:1.35; margin-bottom:14px; }
-.closing-sub{ color:var(--text-dim); font-size:.98rem; margin-bottom:28px; }
-
 /* ---------- Footer ---------- */
 .site-footer{
   padding:56px 0 40px;
@@ -444,7 +386,4 @@ em{
 @media (max-width:600px){
   .section{ padding:60px 0; }
   .grid-3, .grid-4{ grid-template-columns:1fr; }
-  .offer-payment-row{ grid-template-columns:1fr; }
-  .offer-card{ padding:28px; }
-  .closing-card{ padding:26px; }
 }
