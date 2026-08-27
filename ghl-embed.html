@@ -7,19 +7,26 @@
      2. Pega el contenido de ghl-embed.css en el campo Custom CSS de esta
         página de GHL (no aquí, ese archivo va aparte).
      3. No hace falta añadir el script del formulario en Settings > Tracking Code:
-        ya está incluido al final de este bloque (form_embed.js).
+        ya está incluido en el bloque del formulario (form_embed.js).
      Imágenes y vídeos se sirven directamente desde
      https://duesthetic-academy.vercel.app/assets/... (el despliegue actual),
-     no hace falta subirlos a la Media Library de GHL. -->
+     no hace falta subirlos a la Media Library de GHL.
+     El formulario se abre SOLO al pulsar un botón .js-open-form: no hay
+     ningún popup de auto-apertura de GHL en esta página, así que se puede
+     cerrar y volver a abrir tantas veces como se quiera. -->
 
-<!-- LOGO (sin barra superior) -->
+<!-- ============================================================
+     LOGO (flotante, sin barra superior)
+     ============================================================ -->
 <a href="#top" class="logo logo-float">
   <img src="https://duesthetic-academy.vercel.app/assets/img/logo.png" alt="Duesthetic Academy">
 </a>
 
 <main id="top">
 
-  <!-- HERO -->
+  <!-- ============================================================
+       HERO (step line + titular + CTA + estadísticas)
+       ============================================================ -->
   <section class="hero" id="como-funciona">
     <div class="hero-glow"></div>
     <div class="container hero-inner">
@@ -55,7 +62,9 @@
     </div>
   </section>
 
-  <!-- RESUMEN: ARMONIZACIÓN FACIAL INTEGRAL -->
+  <!-- ============================================================
+       RESUMEN — Armonización Facial Integral (lista de técnicas)
+       ============================================================ -->
   <section class="section" id="resumen">
     <div class="container">
       <div class="section-head center">
@@ -77,7 +86,9 @@
     </div>
   </section>
 
-  <!-- FORMACIÓN -->
+  <!-- ============================================================
+       CURSOS — Curso Grupal / VIP One-to-One / Monográficos
+       ============================================================ -->
   <section class="section section-alt" id="cursos">
     <div class="container">
       <div class="section-head center">
@@ -111,7 +122,9 @@
     </div>
   </section>
 
-  <!-- TESTIMONIOS -->
+  <!-- ============================================================
+       TESTIMONIOS — carrusel de vídeos
+       ============================================================ -->
   <section class="section" id="testimonios">
     <div class="container">
       <div class="section-head center">
@@ -133,7 +146,9 @@
     </div>
   </section>
 
-  <!-- CONTACTO / UBICACIONES -->
+  <!-- ============================================================
+       ADMISIÓN / UBICACIONES — CTA final + sedes Madrid y Málaga
+       ============================================================ -->
   <section class="section section-alt" id="admision">
     <div class="container">
       <div class="admission-top card">
@@ -163,7 +178,9 @@
 
 </main>
 
-<!-- FOOTER -->
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
 <footer class="site-footer">
   <div class="container footer-inner">
     <img src="https://duesthetic-academy.vercel.app/assets/img/logo.png" alt="Duesthetic Academy" class="footer-logo">
@@ -179,7 +196,14 @@
   </div>
 </footer>
 
-<!-- MODAL: Más información (formulario GHL) -->
+<!-- ============================================================
+     FORMULARIO GHL — modal "Más información"
+     Se abre SOLO al pulsar un botón .js-open-form (ver el <script>
+     al final de este archivo). No hay ningún popup de auto-apertura:
+     el único iframe del form es este, y su visibilidad la controla
+     por completo nuestro modal (clase .open en #infoModal), así que
+     se puede cerrar y volver a abrir tantas veces como se quiera.
+     ============================================================ -->
 <div class="modal-overlay" id="infoModal" aria-hidden="true">
   <div class="modal-box" role="dialog" aria-modal="true" aria-label="Formulario de más información">
     <button type="button" class="modal-close" id="modalClose" aria-label="Cerrar">&times;</button>
@@ -199,34 +223,18 @@
         data-height="633"
         data-layout-iframe-id="inline-x5rqinJeVXbxIOludYLh"
         data-form-id="x5rqinJeVXbxIOludYLh"
+        data-cookie-consent="true"
+        data-cookie-consent-provider="auto"
         title="[FORM] Reserva"
       ></iframe>
     </div>
   </div>
 </div>
-
-<!-- POPUP GHL (auto-apertura gestionada por GHL, independiente del modal de arriba) -->
-<iframe
-    src="https://app.duesthetic.com/widget/form/x5rqinJeVXbxIOludYLh"
-    style="display:none;width:100%;height:100%;border:none;border-radius:8px"
-    id="popup-x5rqinJeVXbxIOludYLh"
-    data-layout="{'id':'POPUP'}"
-    data-trigger-type="alwaysShow"
-    data-trigger-value=""
-    data-activation-type="alwaysActivated"
-    data-activation-value=""
-    data-deactivation-type="neverDeactivate"
-    data-deactivation-value=""
-    data-form-name="[FORM] Reserva"
-    data-height="599"
-    data-layout-iframe-id="popup-x5rqinJeVXbxIOludYLh"
-    data-form-id="x5rqinJeVXbxIOludYLh"
-    title="[FORM] Reserva"
-    data-modal-height="500"
-        >
-</iframe>
 <script src="https://app.duesthetic.com/js/form_embed.js"></script>
 
+<!-- ============================================================
+     SCRIPTS
+     ============================================================ -->
 <script>
 // Carousel arrows
 document.querySelectorAll('.carousel-arrow').forEach(btn => {
