@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Duesthetic Academy — VSL Reserva · Pago (GHL)
+   Pega este archivo completo en el campo Custom CSS de GHL para esta página.
+   Valores hardcodeados a propósito (sin :root/var()) porque GHL suele
+   aislar/reescribir el CSS por página, y eso rompe los custom properties.
+   El estilo del Order Form nativo se configura aparte, en su propia
+   pestaña Style — ver instrucciones en ghl-reserva-pago-parteA.html.
+   ========================================================================== */
+
+*,*::before,*::after{ box-sizing: border-box !important; }
+html{ scroll-behavior: smooth !important; }
+body{
+  margin: 0 !important;
+  background: #0a0908 !important;
+  color: #f3efe7 !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 300 !important;
+  line-height: 1.6 !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+img{ max-width: 100% !important; display: block !important; }
+a{ color: inherit !important; text-decoration: none !important; }
+h1{ margin: 0 !important; font-weight: 600 !important; letter-spacing: -0.01em !important; }
+p{ margin: 0 !important; }
+
+.container{
+  width: 100% !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+
+em{
+  font-family: 'Playfair Display', serif !important;
+  font-style: italic !important;
+  font-weight: 600 !important;
+  background: linear-gradient(120deg, #a9781f 0%, #f2cf6b 45%, #c9962f 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* ---------- Logo flotante ---------- */
+.logo-float{
+  position: fixed !important;
+  top: 16px !important;
+  left: 80px !important;
+  z-index: 200 !important;
+}
+.logo-float img{ height: 110px !important; }
+
+@media (max-width: 600px){
+  .logo-float{ left: 32px !important; }
+  .logo-float img{ height: 80px !important; }
+}
+
+/* ---------- Contenido ---------- */
+.funnel-lead{ padding: 140px 0 28px !important; }
+.funnel-tail{ padding: 28px 0 90px !important; }
+.funnel-head{ text-align: center !important; max-width: 560px !important; margin: 0 auto 44px !important; }
+.funnel-head h1{ font-size: clamp(1.8rem, 4vw, 2.4rem) !important; margin-bottom: 14px !important; }
+.funnel-head p{ color: #b8b0a2 !important; font-size: .98rem !important; }
+
+.summary-card{
+  max-width: 560px !important;
+  margin: 0 auto !important;
+  background: #17140f !important;
+  border: 1px solid #2a2419 !important;
+  border-radius: 18px !important;
+  padding: 24px 28px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+.summary-card .label{ font-size: .7rem !important; text-transform: uppercase !important; letter-spacing: .1em !important; color: #7d7568 !important; display: block !important; margin-bottom: 6px !important; }
+.summary-card .val{ font-size: .92rem !important; font-weight: 500 !important; }
+.summary-card .amount{ font-family: 'Playfair Display', serif !important; font-style: italic !important; font-size: 1.7rem !important; color: #f2cf6b !important; }
+
+.trust-row{
+  display: flex !important;
+  justify-content: center !important;
+  gap: 26px !important;
+  flex-wrap: wrap !important;
+  margin-top: 30px !important;
+  font-size: .76rem !important;
+  color: #7d7568 !important;
+  letter-spacing: .02em !important;
+}
+
+@media (max-width: 600px){
+  .funnel-lead{ padding-top: 120px !important; }
+  .summary-card{ flex-direction: column !important; align-items: flex-start !important; gap: 8px !important; }
+}
