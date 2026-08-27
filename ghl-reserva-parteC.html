@@ -1,0 +1,85 @@
+<!-- VSL — RESERVA (tráfico frío Meta) — PARTE C
+     Va después del Row del Button #2 (ver instrucciones en Parte B).
+     Es el último bloque de esta página: incluye Objeciones, el footer
+     y el script del acordeón. El CSS (ghl-reserva.css) va en el campo
+     Custom CSS de la página, una sola vez, con cualquiera de las tres
+     partes. -->
+
+<!-- OBJECIONES -->
+<section class="section" id="objeciones">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Antes de que lo pienses</span>
+      <h2>Objeciones</h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">¿Salgo preparado para empezar? <span class="faq-icon">＋</span></button>
+        <div class="faq-answer"><p>Sales preparado para empezar. No sales siendo un experto — nadie lo es después de dos días. Sales habiendo tratado a más de 10 pacientes con un docente corrigiéndote, y sabiendo valorar una cara. Con eso se empieza.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Nunca he infiltrado. ¿Voy a ir más perdido que el resto? <span class="faq-icon">＋</span></button>
+        <div class="faq-answer"><p>Tres alumnos por camilla y un docente al lado significa que nadie avanza solo. Vienen profesionales que nunca han cogido una aguja y profesionales que llevan años infiltrando y quieren corregir vicios. Los dos salen habiendo repetido.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Me da miedo hacerle daño a alguien. <span class="faq-icon">＋</span></button>
+        <div class="faq-answer"><p>Bien — debe darte miedo. Ese respeto es lo que trabajamos: anatomía aplicada, planos, y qué hacer cuando algo no sale como esperabas, con un docente que te para antes, no después.</p></div>
+      </div>
+      <!-- ⚠️ PENDIENTE DE REVISIÓN LEGAL antes de publicar esta respuesta.
+           Se incluye tal cual está redactada en el guión, no como versión
+           final — no publicar sin visto bueno del asesor legal. -->
+      <div class="faq-item">
+        <button class="faq-question">Con mi titulación, ¿puedo aplicar todo esto? <span class="faq-icon">＋</span></button>
+        <div class="faq-answer"><p>Este curso no te habilita — te capacita. Lo que te habilita es tu título. Si eres enfermero, el ácido hialurónico, los inductores de colágeno, los hilos y la mesoterapia ya los puedes hacer hoy, con o sin este curso; lo que no tienes es entrenamiento. Con la toxina botulínica es distinto porque es un medicamento, no un producto sanitario, y ahí hay requisitos que dependen de tu titulación. Si eres médico u odontólogo, hay condiciones propias de cada caso. Esto no se resuelve en un vídeo — llámanos antes de reservar y te decimos exactamente qué puedes aplicar tú tal como está tu situación.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">¿Y después del curso, qué? <span class="faq-icon">＋</span></button>
+        <div class="faq-answer"><p>Sigues teniendo a los docentes por WhatsApp para los casos que te vayan apareciendo. Y si todavía no tienes dónde tratar, puedes alquilar gabinete en nuestras sedes para tus primeros pacientes.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <img src="https://duesthetic-academy.vercel.app/assets/img/logo.png" alt="Duesthetic Academy" class="footer-logo">
+    <span class="footer-tagline">Duesthetic Academy Excellence</span>
+    <span class="footer-sub">Inspirando la excelencia clínica © 2026</span>
+    <div class="footer-links">
+      <a href="https://duesthetic-academy.vercel.app/aviso-legal.html">Aviso legal</a>
+      <span class="dot">·</span>
+      <a href="https://duesthetic-academy.vercel.app/privacidad.html">Política de privacidad</a>
+      <span class="dot">·</span>
+      <a href="https://duesthetic-academy.vercel.app/cookies.html">Política de cookies</a>
+    </div>
+  </div>
+</footer>
+
+<!-- SCRIPT — acordeón de Objeciones -->
+<script>
+document.querySelectorAll('.faq-item').forEach(item => {
+  const question = item.querySelector('.faq-question');
+  const answer = item.querySelector('.faq-answer');
+
+  question.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.faq-item.open').forEach(openItem => {
+      if (openItem !== item) {
+        openItem.classList.remove('open');
+        openItem.querySelector('.faq-answer').style.maxHeight = null;
+      }
+    });
+
+    if (isOpen) {
+      item.classList.remove('open');
+      answer.style.maxHeight = null;
+    } else {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  });
+});
+</script>

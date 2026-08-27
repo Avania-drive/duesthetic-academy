@@ -1,0 +1,146 @@
+<!-- VSL — RESERVA (tráfico frío Meta) — PARTE B
+     Va después del Row del Button #1 (ver instrucciones en Parte A).
+     Al final de este bloque, añade otro Row con un segundo Button
+     nativo de GHL — mismo criterio que el primero:
+       - Texto: "Reservar mi plaza"
+       - Action: "Go to Next Step" (el paso "Pago" del funnel)
+       - Estilo del botón: igual que el del hero (fondo degradado,
+         texto #1a1305, radio 999px, padding 16px 38px, Poppins 600).
+       - Estilo del Row: fondo #100e0c (el mismo que "Qué incluye",
+         que es sección alterna), contenido centrado, con un separador
+         superior fino (borde 1px #2a2419) y algo de padding para que
+         no quede pegado al grid de fases.
+     Debajo de ese Row, añade otro bloque Custom HTML y pega
+     ghl-reserva-parteC.html (Parte C). -->
+
+<!-- FILTRO — para quién es esto (y para quién no) -->
+<section class="section" id="filtro">
+  <div class="container">
+    <span class="badge center-badge">★ Nº1 en práctica con pacientes reales · Madrid &amp; Málaga</span>
+    <div class="filter-grid">
+      <div class="filter-card filter-card--yes">
+        <span class="filter-tag">Esto es para ti si...</span>
+        <p>Eres <strong>médico, odontólogo o enfermero</strong> y quieres incorporar la armonización facial a tu consulta — da igual si nunca has infiltrado o si ya lo haces y quieres afinar el criterio.</p>
+      </div>
+      <div class="filter-card filter-card--no">
+        <span class="filter-tag">Esto no es para ti si...</span>
+        <p>Buscas un diploma para decidir "más adelante" si te dedicas a esto. Aquí se viene a pinchar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LO QUE VAS A VER EN EL VÍDEO -->
+<section class="section section-alt" id="que-vas-a-ver">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">En los próximos 7:50</span>
+      <h2>Lo que vas a ver <em>en el vídeo</em></h2>
+    </div>
+    <ul class="check-list check-list--lg">
+      <li>Cuántos pacientes reales hay en la sala (más de 10, un paciente por hora mínimo)</li>
+      <li>Cuántas veces coges tú la aguja — y cuántas el docente</li>
+      <li>Qué se practica de verdad (los casos que entran esa jornada, no las 9 técnicas del temario a la carta)</li>
+      <li>Por qué el ratio es 3 alumnos por camilla, y qué nos cuesta eso como academia</li>
+      <li>El precio completo, sin letra pequeña, y cómo se reserva</li>
+    </ul>
+  </div>
+</section>
+
+<!-- QUIÉNES SOMOS -->
+<section class="section" id="quienes-somos">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Quién te forma</span>
+      <h2>Quiénes <em>somos</em></h2>
+    </div>
+
+    <div class="grid grid-4 team-grid">
+      <div class="card team-card">
+        <div class="avatar-ring"></div>
+        <h3>José Alberto Truzman Cohen</h3>
+        <span class="team-role">Fundador de Duesthetic Academy</span>
+        <p>Director de Formación Avanzada en Medicina Estética y Armonización Odontoestética.</p>
+      </div>
+      <div class="card team-card">
+        <div class="avatar-ring"></div>
+        <h3>José Miguel Sánchez Sánchez-Ajofrín</h3>
+        <span class="team-role">Cofundador de Duesthetic Academy</span>
+        <p>Docente de Máster Universitario avalado por la Universidad de Vitoria (EUNEIZ).</p>
+      </div>
+      <div class="card team-card">
+        <div class="avatar-ring"></div>
+        <h3>Tania Imbroda Goyanes</h3>
+        <span class="team-role">Directora de Duesthetic</span>
+        <p>Formada en el Máster Universitario en Dermocosmética y Medicina Estética. Más de 10 años dedicados a la armonización facial.</p>
+      </div>
+      <div class="card team-card">
+        <div class="avatar-ring"></div>
+        <h3>Dra. Tania Quevedo</h3>
+        <span class="team-role">Colaboradora Medicina Estética</span>
+        <p>Especialista en medicina estética y traumatología de la columna vertebral.</p>
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <span class="stat-num">+50</span>
+        <span class="stat-label">Ediciones en Madrid</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">10</span>
+        <span class="stat-label">Ediciones en Málaga</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">+600</span>
+        <span class="stat-label">Profesionales entrenados</span>
+      </div>
+    </div>
+
+    <p class="trust-note">No es un currículum de relleno: en esta página te vamos a dar datos y precio, y tienes derecho a saber quién te los está dando.</p>
+  </div>
+</section>
+
+<!-- LO QUE INCLUYE LA FORMACIÓN — Antes / Durante / Después -->
+<section class="section section-alt" id="que-incluye">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Todo el recorrido</span>
+      <h2>Lo que incluye <em>la formación</em></h2>
+    </div>
+
+    <div class="grid grid-3 phase-grid">
+      <div class="card phase-card">
+        <span class="phase-tag">Antes del curso</span>
+        <ul class="check-list">
+          <li>Acceso al temario teórico completo online desde el día que reservas (anatomía, productos, indicaciones, planos, complicaciones) — no es un extra, es una condición para aprovechar la parte práctica.</li>
+        </ul>
+      </div>
+
+      <div class="card phase-card phase-card--featured">
+        <span class="phase-tag">Durante el curso — 15h de Jornada Clínica</span>
+        <ul class="check-list">
+          <li>Más de 10 pacientes reales, mínimo un paciente por hora</li>
+          <li>Práctica sobre los casos que entran esa jornada (no un listado cerrado de 9 técnicas)</li>
+          <li>Valoración clínica en voz alta, corregida por el docente, antes de cada infiltración</li>
+          <li>Docente al lado durante la infiltración: corrige el ángulo, el plano y el criterio en tiempo real</li>
+          <li>Ratio de 3 alumnos por camilla</li>
+          <li>Materiales, insumos, producto y seguro de responsabilidad civil incluidos</li>
+          <li>Sábado de 10:00 a 20:00 (comida incluida) · Domingo hasta las 15:00</li>
+        </ul>
+      </div>
+
+      <div class="card phase-card">
+        <span class="phase-tag">Después del curso</span>
+        <ul class="check-list">
+          <li>Título Propio de Capacitación Duesthetic</li>
+          <li>Acreditación universitaria opcional (2 créditos ECTS oficiales, válidos para baremos públicos)</li>
+          <li>Soporte post-curso con los docentes por WhatsApp para los casos que te vayan apareciendo</li>
+          <li>Posibilidad de alquilar gabinete en nuestras sedes para tus primeros pacientes si aún no tienes dónde tratar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- El Row con el Button nativo #2 (ver instrucciones arriba) va aquí
+     debajo, antes de pasar a "Objeciones" (Parte C). -->
