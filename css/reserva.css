@@ -91,17 +91,19 @@ em{
 .btn-gold:hover{ transform:translateY(-2px); box-shadow:0 14px 34px -10px rgba(201,150,47,.6); }
 .btn-lg{ padding:16px 38px; font-size:.98rem; }
 
-/* ---------- Logo flotante ---------- */
+/* ---------- Logo flotante ----------
+   top más bajo que en landing.html porque aquí hay pre-header encima:
+   así el logo queda debajo de esa franja en vez de solaparla. */
 .logo-float{
   position:fixed;
-  top:16px;
+  top:56px;
   left:80px;
   z-index:200;
 }
 .logo-float img{ height:110px; }
 
 @media (max-width:600px){
-  .logo-float{ left:32px; }
+  .logo-float{ left:32px; top:48px; }
   .logo-float img{ height:80px; }
 }
 
