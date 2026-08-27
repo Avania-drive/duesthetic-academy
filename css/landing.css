@@ -122,6 +122,37 @@ em{
   pointer-events:none;
 }
 .hero-inner{ position:relative; }
+.progress{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:24px;
+}
+.progress-step{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:.72rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--text-faint);
+}
+.progress-dot{
+  width:9px; height:9px;
+  border-radius:50%;
+  border:1.5px solid var(--card-border);
+  background:transparent;
+}
+.progress-step.active{ color:var(--gold-2); }
+.progress-step.active .progress-dot{
+  background:var(--gold-grad);
+  border-color:transparent;
+  box-shadow:0 0 0 3px rgba(201,150,47,.15);
+}
+.progress-step.done .progress-dot{ background:var(--gold-1); border-color:transparent; }
+.progress-line{ width:34px; height:1px; background:var(--card-border); }
 .badge{
   display:inline-block;
   padding:9px 20px;
