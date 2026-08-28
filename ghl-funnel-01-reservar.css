@@ -21,6 +21,20 @@ em{
 }
 .container{ width: 100% !important; max-width: 900px !important; margin: 0 auto !important; padding: 0 24px !important; }
 
+/* Pre-header */
+.preheader{
+  background: #100e0c !important;
+  border-bottom: 1px solid #2a2419 !important;
+  padding: 12px 0 !important;
+  text-align: center !important;
+}
+.preheader span{
+  font-size: .74rem !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  color: #b8b0a2 !important;
+}
+
 /* Funnel chrome — sin menú, solo logo, para no distraer de la conversión */
 .funnel-header{
   padding: 22px 0 !important; text-align: center !important;

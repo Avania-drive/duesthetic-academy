@@ -80,16 +80,32 @@ em{
 .btn-outline:hover{ border-color: #c9962f !important; color: #f2cf6b !important; }
 .btn-block{ width: 100% !important; }
 
-/* ---------- Logo flotante (sin barra superior) ---------- */
+/* ---------- Logo flotante ----------
+   top más bajo que sin pre-header, para que el logo quede debajo de
+   esa franja en vez de solaparla. */
 .logo-float{
   position: fixed !important;
-  top: 16px !important; left: 80px !important;
+  top: 56px !important; left: 80px !important;
   z-index: 200 !important;
 }
 .logo-float img{ height: 110px !important; }
 
+/* ---------- Pre-header ---------- */
+.preheader{
+  background: #100e0c !important;
+  border-bottom: 1px solid #2a2419 !important;
+  padding: 12px 0 !important;
+  text-align: center !important;
+}
+.preheader span{
+  font-size: .74rem !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  color: #b8b0a2 !important;
+}
+
 @media (max-width: 600px){
-  .logo-float{ left: 32px !important; }
+  .logo-float{ left: 32px !important; top: 48px !important; }
   .logo-float img{ height: 80px !important; }
 }
 

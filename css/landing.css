@@ -92,17 +92,33 @@ em{
 .btn-gold:hover{ transform:translateY(-2px); box-shadow:0 14px 34px -10px rgba(201,150,47,.6); }
 .btn-block{ width:100%; }
 
-/* ---------- Logo flotante (sin barra superior) ---------- */
+/* ---------- Logo flotante ----------
+   top más bajo que sin pre-header, para que el logo quede debajo de
+   esa franja en vez de solaparla. */
 .logo-float{
   position:fixed;
-  top:16px;
+  top:56px;
   left:80px;
   z-index:200;
 }
 .logo-float img{ height:110px; }
 
+/* ---------- Pre-header ---------- */
+.preheader{
+  background:var(--bg-alt);
+  border-bottom:1px solid var(--card-border);
+  padding:12px 0;
+  text-align:center;
+}
+.preheader span{
+  font-size:.74rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--text-dim);
+}
+
 @media (max-width:600px){
-  .logo-float{ left:32px; }
+  .logo-float{ left:32px; top:48px; }
   .logo-float img{ height:80px; }
 }
 

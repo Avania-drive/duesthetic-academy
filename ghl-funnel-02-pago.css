@@ -21,6 +21,19 @@ em{
 }
 .container{ width: 100% !important; max-width: 640px !important; margin: 0 auto !important; padding: 0 24px !important; }
 
+.preheader{
+  background: #100e0c !important;
+  border-bottom: 1px solid #2a2419 !important;
+  padding: 12px 0 !important;
+  text-align: center !important;
+}
+.preheader span{
+  font-size: .74rem !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  color: #b8b0a2 !important;
+}
+
 .funnel-header{ padding: 22px 0 !important; text-align: center !important; border-bottom: 1px solid rgba(255,255,255,.06) !important; }
 .funnel-header img{ height: 56px !important; width: auto !important; margin: 0 auto !important; }
 
