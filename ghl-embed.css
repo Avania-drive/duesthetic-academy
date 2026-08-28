@@ -369,11 +369,21 @@ body.modal-open{ overflow: hidden !important; }
   z-index: 1 !important;
 }
 .modal-close:hover{ border-color: #c9962f !important; color: #f2cf6b !important; }
-/* Altura fija (no recortada por vh): si no cabe entera en la pantalla,
-   es el .modal-box quien hace scroll (arriba), nunca se pierde el botón
-   de enviar del formulario. */
-.modal-body{ width: 100% !important; height: 633px !important; margin-top: 6px !important; }
-.modal-body iframe{ display: block !important; width: 100% !important; height: 100% !important; border: none !important; }
+.modal-header{ text-align: center !important; margin: 6px 0 4px !important; padding-right: 30px !important; }
+.modal-header h3{
+  font-family: 'Playfair Display', serif !important;
+  font-style: italic !important;
+  font-size: 1.25rem !important;
+  color: #f3efe7 !important;
+  margin-bottom: 4px !important;
+}
+.modal-header p{ font-size: .84rem !important; color: #b8b0a2 !important; }
+/* min-height (no height fija): así no recorta si no cabe en pantalla
+   (.modal-box hace scroll), y deja que form_embed.js redimensione el
+   iframe según su contenido real en vez de forzarle una altura fija
+   que competía con su propio auto-resize. */
+.modal-body{ width: 100% !important; min-height: 633px !important; margin-top: 6px !important; }
+.modal-body iframe{ display: block !important; width: 100% !important; min-height: 633px !important; border: none !important; }
 
 @media (max-width: 600px){
   .modal-box{ padding: 16px !important; }
