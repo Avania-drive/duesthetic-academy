@@ -163,23 +163,23 @@ em{
 .stat-card{
   display: flex !important;
   flex-direction: column !important;
-  gap: 4px !important;
-  padding: 22px 34px !important;
+  gap: 2px !important;
+  padding: 10px 16px !important;
   background: #17140f !important;
   border: 1px solid #2a2419 !important;
-  border-radius: 12px !important;
-  min-width: 170px !important;
+  border-radius: 10px !important;
+  min-width: 110px !important;
 }
 .stat-num{
   font-family: 'Playfair Display', serif !important;
   font-style: italic !important;
-  font-size: 1.9rem !important;
+  font-size: 1.2rem !important;
   background: linear-gradient(120deg, #a9781f 0%, #f2cf6b 45%, #c9962f 100%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   color: transparent !important;
 }
-.stat-label{ font-size: .76rem !important; color: #7d7568 !important; letter-spacing: .03em !important; }
+.stat-label{ font-size: .62rem !important; color: #7d7568 !important; letter-spacing: .02em !important; }
 
 /* ---------- Sections ---------- */
 .section{ padding: 96px 0 !important; }

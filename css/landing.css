@@ -176,23 +176,23 @@ em{
 .stat-card{
   display:flex;
   flex-direction:column;
-  gap:4px;
-  padding:22px 34px;
+  gap:2px;
+  padding:10px 16px;
   background:var(--card);
   border:1px solid var(--card-border);
-  border-radius:var(--radius-sm);
-  min-width:170px;
+  border-radius:10px;
+  min-width:110px;
 }
 .stat-num{
   font-family:var(--font-accent);
   font-style:italic;
-  font-size:1.9rem;
+  font-size:1.2rem;
   background:var(--gold-grad);
   -webkit-background-clip:text;
   background-clip:text;
   color:transparent;
 }
-.stat-label{ font-size:.76rem; color:var(--text-faint); letter-spacing:.03em; }
+.stat-label{ font-size:.62rem; color:var(--text-faint); letter-spacing:.02em; }
 
 /* ---------- Sections ---------- */
 .section{ padding:96px 0; }
