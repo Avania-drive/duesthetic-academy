@@ -391,15 +391,16 @@ body.modal-open{ overflow:hidden; }
   margin-bottom:4px;
 }
 .modal-header p{ font-size:.84rem; color:var(--text-dim); }
-/* Altura fija (no min-height): con min-height volvió el problema de
-   clics fallando en algunas cards, así que se revierte a height fija.
-   850px en vez de los 633px que declara GHL porque con 633 el propio
-   formulario mostraba scroll interno (y eso lo recortaba en horizontal
-   al restarle ancho la barra de scroll). Si aun así no cabe entera en
-   pantalla, es .modal-box quien hace scroll (overflow-y:auto más arriba
-   en este archivo). */
-.modal-body{ width:100%; height:850px; margin-top:6px; }
-.modal-body iframe{ display:block; width:100%; height:100%; border:none; }
+/* El widget dentro del iframe usa iframe-resizer: calcula su altura
+   real de contenido y hace iframe.style.height = 'Xpx' por postMessage.
+   Un height !important en nuestra hoja SIEMPRE gana sobre ese
+   style.height puesto por JS, así que forzar altura aquí bloquea su
+   auto-resize real (por eso daba igual 633 o 850px: el contenido
+   interno nunca podía usar ese espacio y se veía como una cajita
+   diminuta con scroll propio). Se deja SIN !important — solo como
+   valor de partida antes de que el script calcule el real. */
+.modal-body{ width:100%; margin-top:6px; }
+.modal-body iframe{ display:block; width:100%; height:850px; border:none; }
 
 @media (max-width:600px){
   .modal-box{ padding:16px; }
