@@ -241,11 +241,15 @@
 <script>
 (function(){
   // GHL renderiza esta página con Vue/Nuxt, que puede re-crear los nodos
-  // del DOM en momentos que no controlamos. Por eso todo va por
-  // delegación de eventos en document (no enganchado a botones/modal
-  // concretos) y sin cachear referencias: así funciona sin importar
-  // cuándo aparezcan o se reemplacen esos nodos, y aunque este script
-  // se llegue a ejecutar más de una vez.
+  // del DOM en momentos que no controlamos, y engancha sus propios
+  // listeners a los envoltorios de cada elemento (para su editor,
+  // tracking, etc.) que pueden llamar a stopPropagation() y cortar el
+  // clic antes de que llegue a un listener normal en fase de burbuja.
+  // Por eso esto va por delegación en document EN FASE DE CAPTURA
+  // (el 3er argumento "true" de addEventListener) — así se dispara
+  // antes de que el clic llegue al elemento, y ningún stopPropagation()
+  // posterior de GHL puede bloquearlo. Tampoco se cachean referencias:
+  // funciona sin importar cuándo aparezcan o se reemplacen los nodos.
   if (window.__duestheticModalBound) return;
   window.__duestheticModalBound = true;
 
@@ -291,7 +295,7 @@
         behavior: 'smooth'
       });
     }
-  });
+  }, true);
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeInfoModal();

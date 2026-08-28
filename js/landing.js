@@ -1,6 +1,7 @@
-// Todo va por delegación de eventos en document (no enganchado a botones/
-// modal concretos) y sin cachear referencias: más robusto frente a nodos
-// que se añaden o reemplazan después de cargar este script.
+// Todo va por delegación de eventos en document, en fase de captura (3er
+// argumento "true"), y sin cachear referencias: más robusto frente a nodos
+// que se añaden o reemplazan después de cargar este script, o frente a
+// otros listeners que corten el evento con stopPropagation().
 
 function openInfoModal() {
   const modal = document.getElementById('infoModal');
@@ -44,7 +45,7 @@ document.addEventListener('click', (e) => {
       behavior: 'smooth'
     });
   }
-});
+}, true);
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeInfoModal();
