@@ -274,6 +274,10 @@
   }
 
   document.addEventListener('click', (e) => {
+    // DEBUG TEMPORAL: quitar esta línea cuando quede confirmado que
+    // funciona. Abre la consola (F12 → Console), haz clic en un botón
+    // que no responda y mira qué se imprime aquí.
+    console.log('[duesthetic] click detectado en:', e.target, '→ .js-open-form más cercano:', e.target.closest('.js-open-form'));
     if (e.target.closest('.js-open-form')) {
       openInfoModal();
       return;
