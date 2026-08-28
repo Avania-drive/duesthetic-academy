@@ -52,8 +52,10 @@ em{
 .logo-float img{ height: 110px !important; }
 
 @media (max-width: 600px){
-  .logo-float{ left: 32px !important; top: 48px !important; }
-  .logo-float img{ height: 80px !important; }
+  .logo-float{ left: 12px !important; top: 7px !important; }
+  .logo-float img{ height: 28px !important; }
+  .preheader{ text-align: left !important; }
+  .preheader .container{ padding-left: 56px !important; }
   .preheader span{ font-size: .58rem !important; letter-spacing: .03em !important; }
 }
 

@@ -103,8 +103,10 @@ em{
 .logo-float img{ height:110px; }
 
 @media (max-width:600px){
-  .logo-float{ left:32px; top:48px; }
-  .logo-float img{ height:80px; }
+  .logo-float{ left:12px; top:7px; }
+  .logo-float img{ height:28px; }
+  .preheader{ text-align:left; }
+  .preheader .container{ padding-left:56px; }
   .preheader span{ font-size:.58rem; letter-spacing:.03em; }
 }
 
