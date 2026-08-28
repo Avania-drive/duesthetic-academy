@@ -54,39 +54,6 @@ em{
   .logo-float img{ height: 80px !important; }
 }
 
-/* ---------- Step line ---------- */
-.progress{
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 10px !important;
-  flex-wrap: wrap !important;
-  margin-bottom: 32px !important;
-}
-.progress-step{
-  display: flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  font-size: .72rem !important;
-  letter-spacing: .06em !important;
-  text-transform: uppercase !important;
-  color: #7d7568 !important;
-}
-.progress-dot{
-  width: 9px !important; height: 9px !important;
-  border-radius: 50% !important;
-  border: 1.5px solid #2a2419 !important;
-  background: transparent !important;
-}
-.progress-step.active{ color: #f2cf6b !important; }
-.progress-step.active .progress-dot{
-  background: linear-gradient(120deg, #a9781f 0%, #f2cf6b 45%, #c9962f 100%) !important;
-  border-color: transparent !important;
-  box-shadow: 0 0 0 3px rgba(201,150,47,.15) !important;
-}
-.progress-step.done .progress-dot{ background: #c9962f !important; border-color: transparent !important; }
-.progress-line{ width: 34px !important; height: 1px !important; background: #2a2419 !important; }
-
 /* ---------- Contenido ---------- */
 .funnel-lead{ padding: 140px 0 28px !important; }
 .funnel-tail{ padding: 28px 0 90px !important; }
