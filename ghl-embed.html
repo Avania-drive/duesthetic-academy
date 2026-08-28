@@ -257,6 +257,19 @@
   if (window.__duestheticModalBound) return;
   window.__duestheticModalBound = true;
 
+  // DEBUG TEMPORAL: avisa en consola de cualquier <style>/<script>/nodo
+  // que algo añada a <head> o <body> después de cargar esta página —
+  // así vemos qué inyecta GHL cuando el iframe termina de redimensionarse.
+  new MutationObserver((mutations) => {
+    mutations.forEach((m) => {
+      m.addedNodes.forEach((node) => {
+        if (node.nodeType === 1) {
+          console.log('[duesthetic] nodo añadido a', m.target.tagName, ':', node.tagName, node.id || node.className || node.outerHTML?.slice(0, 200));
+        }
+      });
+    });
+  }).observe(document.documentElement, { childList: true, subtree: true });
+
   function openInfoModal() {
     const modal = document.getElementById('infoModal');
     if (!modal) return;
@@ -274,6 +287,8 @@
   }
 
   document.addEventListener('click', (e) => {
+    // DEBUG TEMPORAL
+    console.log('[duesthetic] click en:', e.target, 'defaultPrevented:', e.defaultPrevented);
     if (e.target.closest('.js-open-form')) {
       openInfoModal();
       return;
