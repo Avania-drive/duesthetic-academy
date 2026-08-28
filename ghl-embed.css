@@ -169,23 +169,41 @@ em{
 .stat-card{
   display: flex !important;
   flex-direction: column !important;
-  gap: 2px !important;
-  padding: 10px 16px !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: 4px !important;
+  padding: 14px 26px !important;
   background: #17140f !important;
   border: 1px solid #2a2419 !important;
   border-radius: 10px !important;
-  min-width: 110px !important;
+  min-width: 130px !important;
 }
 .stat-num{
   font-family: 'Playfair Display', serif !important;
   font-style: italic !important;
-  font-size: 1.2rem !important;
+  font-size: 1.9rem !important;
   background: linear-gradient(120deg, #a9781f 0%, #f2cf6b 45%, #c9962f 100%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   color: transparent !important;
 }
 .stat-label{ font-size: .62rem !important; color: #7d7568 !important; letter-spacing: .02em !important; }
+
+.stat-highlight{
+  margin: 14px 0 0 !important;
+  text-align: center !important;
+  font-size: .8rem !important;
+  color: #b8b0a2 !important;
+}
+.stat-highlight strong{
+  font-family: 'Playfair Display', serif !important;
+  font-style: italic !important;
+  font-size: 1rem !important;
+  background: linear-gradient(120deg, #a9781f 0%, #f2cf6b 45%, #c9962f 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
 
 /* ---------- Sections ---------- */
 .section{ padding: 96px 0 !important; }
