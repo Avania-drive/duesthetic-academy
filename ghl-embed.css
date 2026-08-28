@@ -389,3 +389,18 @@ body.modal-open{ overflow: hidden !important; }
   .section{ padding: 64px 0 !important; }
   .grid-3{ grid-template-columns: 1fr !important; }
 }
+
+/* ---------- Anular Form/Popup nativo huérfano ----------
+   Hay un elemento Form nativo de GHL (id="form-builder") suelto en el
+   lienzo de esta página, fuera de nuestro modal. Desactivarlo desde
+   Settings de Popups en GHL no lo saca del DOM ni le quita la
+   interactividad (sigue siendo clicable/focuseable aunque invisible,
+   interceptando clics y disparando el autocompletado del navegador
+   "flotando" sobre el resto del contenido). Se anula por completo aquí
+   mientras no se localice y elimine ese elemento desde el editor. */
+#form-builder{
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
