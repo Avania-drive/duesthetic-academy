@@ -22,6 +22,9 @@ em{
 .container{ width: 100% !important; max-width: 640px !important; margin: 0 auto !important; padding: 0 24px !important; }
 
 .preheader{
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 150 !important;
   background: #100e0c !important;
   border-bottom: 1px solid #2a2419 !important;
   padding: 12px 0 !important;

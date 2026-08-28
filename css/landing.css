@@ -105,6 +105,9 @@ em{
 
 /* ---------- Pre-header ---------- */
 .preheader{
+  position:sticky;
+  top:0;
+  z-index:150;
   background:var(--bg-alt);
   border-bottom:1px solid var(--card-border);
   padding:12px 0;

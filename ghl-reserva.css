@@ -94,6 +94,9 @@ em{
 
 /* ---------- Pre-header ---------- */
 .preheader{
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 150 !important;
   background: #100e0c !important;
   border-bottom: 1px solid #2a2419 !important;
   padding: 12px 0 !important;
