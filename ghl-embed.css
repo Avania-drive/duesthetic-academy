@@ -346,3 +346,20 @@ em{
   transform: translateY(-2px) !important;
   box-shadow: 0 14px 34px -10px rgba(201,150,47,.6) !important;
 }
+
+/* ---------- Campos de selección del Form nativo ----------
+   El Form ya no está en un iframe, así que sí podemos estilizarlo
+   directamente. Si el desplegable en realidad es un widget
+   personalizado (no un <select> nativo) esto no bastará — inspecciónalo
+   y pásame la clase/ID real para afinar el selector. */
+select,
+select.form-control{
+  background-color: #100e0c !important;
+  color: #f3efe7 !important;
+  border: 1px solid #2a2419 !important;
+  border-radius: 12px !important;
+}
+select option{
+  background-color: #100e0c !important;
+  color: #f3efe7 !important;
+}
