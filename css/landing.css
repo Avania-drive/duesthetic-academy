@@ -353,6 +353,8 @@ body.modal-open{ overflow:hidden; }
   width:100%;
   max-width:520px;
   max-height:90vh;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
   background:var(--card);
   border:1px solid var(--card-border);
   border-radius:var(--radius);
@@ -377,13 +379,17 @@ body.modal-open{ overflow:hidden; }
   align-items:center;
   justify-content:center;
   transition:border-color .2s ease, color .2s ease;
+  z-index:1;
 }
 .modal-close:hover{ border-color:var(--gold-1); color:var(--gold-2); }
-.modal-body{ width:100%; height:min(633px, 75vh); margin-top:6px; }
+/* Altura fija (no recortada por vh): si no cabe entera en la pantalla,
+   es el .modal-box quien hace scroll (arriba), nunca se pierde el botón
+   de enviar del formulario. */
+.modal-body{ width:100%; height:633px; margin-top:6px; }
+.modal-body iframe{ display:block; width:100%; height:100%; border:none; }
 
 @media (max-width:600px){
   .modal-box{ padding:16px; }
-  .modal-body{ height:min(633px, 70vh); }
 }
 
 /* ---------- Responsive ---------- */
