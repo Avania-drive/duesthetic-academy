@@ -1,42 +1,49 @@
-// Carousel arrows
-document.querySelectorAll('.carousel-arrow').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const carousel = document.getElementById(btn.dataset.target);
-    const track = carousel.querySelector('.carousel-track');
-    const card = track.querySelector('.phone-card');
-    const gap = 20;
-    const scrollAmount = (card ? card.offsetWidth : 230) + gap;
-    track.scrollBy({
-      left: btn.classList.contains('next') ? scrollAmount : -scrollAmount,
-      behavior: 'smooth'
-    });
-  });
-});
-
-// Modal "Más información" (formulario GHL)
-const infoModal = document.getElementById('infoModal');
-const modalClose = document.getElementById('modalClose');
+// Todo va por delegación de eventos en document (no enganchado a botones/
+// modal concretos) y sin cachear referencias: más robusto frente a nodos
+// que se añaden o reemplazan después de cargar este script.
 
 function openInfoModal() {
-  infoModal?.classList.add('open');
-  infoModal?.setAttribute('aria-hidden', 'false');
+  const modal = document.getElementById('infoModal');
+  if (!modal) return;
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
   document.body.classList.add('modal-open');
 }
 
 function closeInfoModal() {
-  infoModal?.classList.remove('open');
-  infoModal?.setAttribute('aria-hidden', 'true');
+  const modal = document.getElementById('infoModal');
+  if (!modal) return;
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('modal-open');
 }
 
-document.querySelectorAll('.js-open-form').forEach(btn => {
-  btn.addEventListener('click', openInfoModal);
-});
-
-modalClose?.addEventListener('click', closeInfoModal);
-
-infoModal?.addEventListener('click', (e) => {
-  if (e.target === infoModal) closeInfoModal();
+document.addEventListener('click', (e) => {
+  if (e.target.closest('.js-open-form')) {
+    openInfoModal();
+    return;
+  }
+  if (e.target.closest('#modalClose')) {
+    closeInfoModal();
+    return;
+  }
+  if (e.target.id === 'infoModal') {
+    closeInfoModal();
+    return;
+  }
+  const arrow = e.target.closest('.carousel-arrow');
+  if (arrow) {
+    const carousel = document.getElementById(arrow.dataset.target);
+    const track = carousel && carousel.querySelector('.carousel-track');
+    if (!track) return;
+    const card = track.querySelector('.phone-card');
+    const gap = 20;
+    const scrollAmount = (card ? card.offsetWidth : 230) + gap;
+    track.scrollBy({
+      left: arrow.classList.contains('next') ? scrollAmount : -scrollAmount,
+      behavior: 'smooth'
+    });
+  }
 });
 
 document.addEventListener('keydown', (e) => {
