@@ -213,7 +213,7 @@
   <div class="modal-box" role="dialog" aria-modal="true" aria-label="Formulario de más información">
     <button type="button" class="modal-close" id="modalClose" aria-label="Cerrar">&times;</button>
     <div class="modal-header">
-      <h3>¿Quieres más información?</h3>
+      <h3>Solicita información aquí</h3>
       <p>Déjanos tus datos y te contactamos en menos de 24h.</p>
     </div>
     <div class="modal-body">
@@ -274,10 +274,6 @@
   }
 
   document.addEventListener('click', (e) => {
-    // DEBUG TEMPORAL: quitar esta línea cuando quede confirmado que
-    // funciona. Abre la consola (F12 → Console), haz clic en un botón
-    // que no responda y mira qué se imprime aquí.
-    console.log('[duesthetic] click detectado en:', e.target, '→ .js-open-form más cercano:', e.target.closest('.js-open-form'));
     if (e.target.closest('.js-open-form')) {
       openInfoModal();
       return;

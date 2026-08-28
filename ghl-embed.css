@@ -380,9 +380,12 @@ body.modal-open{ overflow: hidden !important; }
 .modal-header p{ font-size: .84rem !important; color: #b8b0a2 !important; }
 /* Altura fija (no min-height): con min-height volvió el problema de
    clics fallando en algunas cards, así que se revierte a height fija.
-   Si no cabe entera en pantalla, es .modal-box quien hace scroll
-   (overflow-y:auto más abajo en este archivo). */
-.modal-body{ width: 100% !important; height: 633px !important; margin-top: 6px !important; }
+   850px en vez de los 633px que declara GHL porque con 633 el propio
+   formulario mostraba scroll interno (y eso lo recortaba en horizontal
+   al restarle ancho la barra de scroll). Si aun así no cabe entera en
+   pantalla, es .modal-box quien hace scroll (overflow-y:auto más abajo
+   en este archivo). */
+.modal-body{ width: 100% !important; height: 850px !important; margin-top: 6px !important; }
 .modal-body iframe{ display: block !important; width: 100% !important; height: 100% !important; border: none !important; }
 
 @media (max-width: 600px){
