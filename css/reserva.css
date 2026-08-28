@@ -196,6 +196,22 @@ em{
   font-size:1.3rem;
   box-shadow:var(--shadow-gold);
 }
+
+/* Miniatura de vídeo (imagen de sustitución + botón de play superpuesto) */
+.video-thumb{ position:relative; aspect-ratio:16/9; }
+.video-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+.video-thumb::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(10,9,8,0) 40%, rgba(10,9,8,.55) 100%);
+}
+.video-thumb .play-icon{
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  z-index:1;
+}
 .video-placeholder-label{ font-size:.92rem; font-weight:600; color:var(--text); }
 .video-placeholder-note{ font-size:.76rem; color:var(--text-faint); max-width:400px; }
 

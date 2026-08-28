@@ -180,6 +180,22 @@ em{
   font-size: 1.3rem !important;
   box-shadow: 0 10px 30px -12px rgba(201,150,47,.45) !important;
 }
+
+/* Miniatura de vídeo (imagen de sustitución + botón de play superpuesto) */
+.video-thumb{ position: relative !important; aspect-ratio: 16/9 !important; }
+.video-thumb img{ width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important; }
+.video-thumb::after{
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(180deg, rgba(10,9,8,0) 40%, rgba(10,9,8,.55) 100%) !important;
+}
+.video-thumb .play-icon{
+  position: absolute !important;
+  top: 50% !important; left: 50% !important;
+  transform: translate(-50%,-50%) !important;
+  z-index: 1 !important;
+}
 .video-placeholder-label{ font-size: .92rem !important; font-weight: 600 !important; color: #f3efe7 !important; }
 .video-placeholder-note{ font-size: .76rem !important; color: #7d7568 !important; max-width: 400px !important; }
 
