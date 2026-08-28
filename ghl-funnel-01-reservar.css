@@ -37,6 +37,9 @@ em{
   text-transform: uppercase !important;
   color: #b8b0a2 !important;
 }
+@media (max-width: 600px){
+  .preheader span{ font-size: .58rem !important; letter-spacing: .03em !important; }
+}
 
 /* Funnel chrome — sin menú, solo logo, para no distraer de la conversión */
 .funnel-header{

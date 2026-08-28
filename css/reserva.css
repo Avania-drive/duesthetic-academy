@@ -105,6 +105,7 @@ em{
 @media (max-width:600px){
   .logo-float{ left:32px; top:48px; }
   .logo-float img{ height:80px; }
+  .preheader span{ font-size:.58rem; letter-spacing:.03em; }
 }
 
 /* ---------- Pre-header ---------- */
