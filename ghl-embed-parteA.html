@@ -1,0 +1,66 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- LANDING — PARTE A de 4 (+ 3 snippets de cursos aparte)
+     Ya no usamos iframe/modal propio para el formulario: se abre con
+     Popups nativos de GHL, disparados por Buttons nativos de GHL.
+     Esta página tiene 5 botones "Más información" en total. Móntala
+     así, en este orden exacto:
+
+     1) Crea un Popup en GHL (Sites → Popups → Nuevo) con el elemento
+        Form dentro (el mismo "[FORM] Reserva"). Trigger: manual /
+        On Click (NO "Always Show"). Puedes usar el MISMO Popup para
+        los 5 botones, no hace falta crear uno por botón.
+     2) Pega este archivo (Parte A) en un bloque Custom HTML.
+     3) Debajo, añade un Row con un Button nativo:
+          - Texto: "Más información"
+          - Action: "Open Popup" → el Popup que creaste en el paso 1
+          - Clase CSS del botón (si tu plan de GHL permite añadir
+            clases personalizadas al Button): "btn btn-gold" — así
+            hereda el estilo exacto ya definido en ghl-embed.css, sin
+            tener que replicar valores a mano.
+          - Si NO puedes añadir clases personalizadas, configura a
+            mano en el panel de estilo del Button: fondo degradado
+            linear-gradient(120deg, #a9781f 0%, #f2cf6b 45%, #c9962f 100%)
+            (o sólido #c9962f si no admite degradado), texto #1a1305,
+            radio 999px, padding 14px 30px, fuente Poppins 600.
+          - Estilo del Row: fondo #0a0908 (el mismo que el hero),
+            contenido centrado, sin borde propio, padding vertical
+            ~20px 0.
+     4) Debajo de ese Row, añade otro bloque Custom HTML y pega
+        ghl-embed-parteB.html (Parte B).
+     5) El CSS va aparte: pega ghl-embed.css en el campo Custom CSS
+        de esta página de GHL (una sola vez).
+     Imágenes y vídeos se sirven directamente desde
+     https://duesthetic-academy.vercel.app/assets/... (el despliegue
+     actual), no hace falta subirlas a la Media Library de GHL. -->
+
+<!-- ============================================================
+     LOGO (flotante, sin barra superior)
+     ============================================================ -->
+<a href="#como-funciona" class="logo logo-float">
+  <img src="https://duesthetic-academy.vercel.app/assets/img/logo.png" alt="Duesthetic Academy">
+</a>
+
+<!-- ============================================================
+     HERO (step line + titular) — el botón #1 va después de este bloque
+     ============================================================ -->
+<section class="hero" id="como-funciona">
+  <div class="hero-glow"></div>
+  <div class="container hero-inner">
+    <div class="progress">
+      <div class="progress-step active"><span class="progress-dot"></span>Info</div>
+      <span class="progress-line"></span>
+      <div class="progress-step"><span class="progress-dot"></span>Reserva</div>
+      <span class="progress-line"></span>
+      <div class="progress-step"><span class="progress-dot"></span>Pago</div>
+      <span class="progress-line"></span>
+      <div class="progress-step"><span class="progress-dot"></span>Agenda</div>
+    </div>
+    <span class="badge">★ Nº1 en práctica con pacientes reales · Madrid &amp; Málaga</span>
+    <h1>La formación que define<br><em>tu futuro.</em></h1>
+    <p class="hero-sub">La academia nº1 en formación práctica de armonización facial. Más de 50 ediciones en Madrid y 10 en Málaga. Más de 600 profesionales entrenados sobre pacientes reales.</p>
+  </div>
+</section>
+<!-- Row con Button nativo #1 (ver instrucciones arriba) va aquí debajo -->

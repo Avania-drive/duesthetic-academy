@@ -1,0 +1,67 @@
+<!-- LANDING — PARTE D de 4 (última)
+     Va después del Row del Button #5 (ver instrucciones en Parte C).
+     Ubicaciones (en su propia tarjeta, separada de la de arriba
+     porque el botón nativo se coló en medio) + Footer + Script del
+     carrusel. El CSS (ghl-embed.css) va en el campo Custom CSS de la
+     página, una sola vez, con cualquiera de las 4 partes. -->
+
+<section class="admision-tail" id="admision-ubicaciones">
+  <div class="container">
+    <div class="admission-top card">
+      <div class="locations-row">
+        <div class="location-card">
+          <span class="loc-pin">📍</span>
+          <div>
+            <strong>Sede Madrid</strong>
+            <p>C/ O'Donnell 49, Esc. B, Bajo dcha.<br>Barrio de Salamanca, 28009</p>
+          </div>
+        </div>
+        <div class="location-card">
+          <span class="loc-pin">📍</span>
+          <div>
+            <strong>Sede Málaga</strong>
+            <p>Edificio Scala, C/ Hilera 8, Portal 3, Piso 2B<br>Distrito Centro, 29007</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <img src="https://duesthetic-academy.vercel.app/assets/img/logo.png" alt="Duesthetic Academy" class="footer-logo">
+    <span class="footer-tagline">Duesthetic Academy Excellence</span>
+    <span class="footer-sub">Inspirando la excelencia clínica © 2026</span>
+    <div class="footer-links">
+      <a href="https://duesthetic-academy.vercel.app/aviso-legal.html">Aviso legal</a>
+      <span class="dot">·</span>
+      <a href="https://duesthetic-academy.vercel.app/privacidad.html">Política de privacidad</a>
+      <span class="dot">·</span>
+      <a href="https://duesthetic-academy.vercel.app/cookies.html">Política de cookies</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     SCRIPTS — solo el carrusel; el formulario lo gestiona GHL solo
+     ============================================================ -->
+<script>
+document.addEventListener('click', (e) => {
+  const arrow = e.target.closest('.carousel-arrow');
+  if (!arrow) return;
+  const carousel = document.getElementById(arrow.dataset.target);
+  const track = carousel && carousel.querySelector('.carousel-track');
+  if (!track) return;
+  const card = track.querySelector('.phone-card');
+  const gap = 20;
+  const scrollAmount = (card ? card.offsetWidth : 230) + gap;
+  track.scrollBy({
+    left: arrow.classList.contains('next') ? scrollAmount : -scrollAmount,
+    behavior: 'smooth'
+  });
+});
+</script>

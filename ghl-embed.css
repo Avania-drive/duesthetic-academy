@@ -162,13 +162,8 @@ em{
   color: #b8b0a2 !important;
   font-size: 1.02rem !important;
 }
-.hero-actions{
-  display: flex !important;
-  justify-content: center !important;
-  gap: 16px !important;
-  flex-wrap: wrap !important;
-  margin-bottom: 56px !important;
-}
+/* Continuación visual del hero (Parte B) tras el Row del Button #1 */
+.hero-stats-continue{ background: #0a0908 !important; padding: 0 0 70px !important; }
 .stat-row{
   display: flex !important;
   justify-content: center !important;
@@ -203,9 +198,6 @@ em{
 .section-head.center{ text-align: center !important; }
 .section-head h2{ font-size: clamp(1.7rem, 3.4vw, 2.4rem) !important; margin-bottom: 14px !important; }
 .section-head p{ color: #b8b0a2 !important; }
-
-.grid{ display: grid !important; gap: 20px !important; }
-.grid-3{ grid-template-columns: repeat(3,1fr) !important; }
 
 .card{
   background: #17140f !important;
@@ -298,6 +290,8 @@ em{
 .location-card strong{ display: block !important; margin-bottom: 6px !important; color: #f2cf6b !important; font-size: .92rem !important; }
 .location-card p{ font-size: .85rem !important; color: #b8b0a2 !important; }
 .loc-pin{ font-size: 1.1rem !important; }
+/* Continuación visual de Admisión (Parte D) tras el Row del Button #5 */
+.admision-tail{ background: #100e0c !important; padding: 0 0 96px !important; }
 
 /* Footer */
 .site-footer{
@@ -318,101 +312,24 @@ em{
 .footer-links a:hover{ color: #f2cf6b !important; }
 .footer-links .dot{ margin: 0 8px !important; }
 
-/* Modal: Más información (form GHL) */
-body.modal-open{ overflow: hidden !important; }
-.modal-overlay{
-  position: fixed !important;
-  inset: 0 !important;
-  z-index: 1000 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 20px !important;
-  background: rgba(10,9,8,.82) !important;
-  backdrop-filter: blur(6px) !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  transition: opacity .25s ease, visibility .25s ease !important;
-}
-.modal-overlay.open{ opacity: 1 !important; visibility: visible !important; }
-.modal-box{
-  position: relative !important;
-  width: 100% !important;
-  max-width: 520px !important;
-  max-height: 90vh !important;
-  overflow-y: auto !important;
-  -webkit-overflow-scrolling: touch !important;
-  background: #17140f !important;
-  border: 1px solid #2a2419 !important;
-  border-radius: 18px !important;
-  box-shadow: 0 30px 60px -20px rgba(0,0,0,.7) !important;
-  padding: 22px !important;
-  transform: translateY(16px) !important;
-  transition: transform .25s ease !important;
-}
-.modal-overlay.open .modal-box{ transform: translateY(0) !important; }
-.modal-close{
-  position: absolute !important;
-  top: 12px !important; right: 12px !important;
-  width: 34px !important; height: 34px !important;
-  border-radius: 50% !important;
-  border: 1px solid #2a2419 !important;
-  background: #100e0c !important;
-  color: #f3efe7 !important;
-  font-size: 1.3rem !important;
-  line-height: 1 !important;
-  cursor: pointer !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  transition: border-color .2s ease, color .2s ease !important;
-  z-index: 1 !important;
-}
-.modal-close:hover{ border-color: #c9962f !important; color: #f2cf6b !important; }
-.modal-header{ text-align: center !important; margin: 6px 0 4px !important; padding-right: 30px !important; }
-.modal-header h3{
-  font-family: 'Playfair Display', serif !important;
-  font-style: italic !important;
-  font-size: 1.25rem !important;
-  color: #f3efe7 !important;
-  margin-bottom: 4px !important;
-}
-.modal-header p{ font-size: .84rem !important; color: #b8b0a2 !important; }
-/* El widget dentro del iframe usa iframe-resizer: calcula su altura
-   real de contenido y hace iframe.style.height = 'Xpx' por postMessage.
-   Un height con !important en nuestra hoja SIEMPRE gana sobre ese
-   style.height puesto por JS, así que si forzamos altura aquí,
-   bloqueamos su auto-resize real (por eso daba igual poner 633 o
-   850px: el contenido interno nunca podía usar ese espacio y se veía
-   como una cajita diminuta con scroll propio). Se deja SIN !important
-   — solo como valor de partida antes de que el script calcule el
-   real — para no bloquear el resize dinámico. */
-.modal-body{ width: 100% !important; margin-top: 6px !important; }
-.modal-body iframe{ display: block !important; width: 100% !important; height: 850px; border: none !important; }
-
-@media (max-width: 600px){
-  .modal-box{ padding: 16px !important; }
-}
-
 /* ---------- Responsive ---------- */
 @media (max-width: 960px){
-  .grid-3{ grid-template-columns: repeat(2,1fr) !important; }
   .locations-row{ grid-template-columns: 1fr !important; }
 }
 
 @media (max-width: 600px){
   .section{ padding: 64px 0 !important; }
-  .grid-3{ grid-template-columns: 1fr !important; }
 }
 
 /* ---------- Anular Form/Popup nativo huérfano ----------
    Hay un elemento Form nativo de GHL (id="form-builder") suelto en el
-   lienzo de esta página, fuera de nuestro modal. Desactivarlo desde
-   Settings de Popups en GHL no lo saca del DOM ni le quita la
-   interactividad (sigue siendo clicable/focuseable aunque invisible,
-   interceptando clics y disparando el autocompletado del navegador
-   "flotando" sobre el resto del contenido). Se anula por completo aquí
-   mientras no se localice y elimine ese elemento desde el editor. */
+   lienzo de esta página, sin relación con el Popup nuevo que abren los
+   Buttons nativos. Desactivarlo desde Settings de Popups en GHL no lo
+   saca del DOM ni le quita la interactividad (sigue siendo clicable/
+   focuseable aunque invisible, disparando el autocompletado del
+   navegador "flotando" sobre el resto del contenido). Se anula por
+   completo aquí como red de seguridad mientras se localiza y elimina
+   ese elemento desde el editor. */
 #form-builder{
   display: none !important;
   visibility: hidden !important;
