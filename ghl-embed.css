@@ -392,12 +392,37 @@ select option{
 }
 
 /* ---------- Checks de términos del Form nativo ----------
-   Salen blancos por defecto y se pierden sobre el fondo oscuro al
-   marcarlos — se les da el color dorado de la marca para que el check
-   se distinga cuando está seleccionado. */
+   accent-color no bastaba (GHL pinta su propio check, probablemente
+   con appearance nativo o un icono en blanco que ignora accent-color).
+   Se anula ese renderizado por completo con appearance:none y se
+   dibuja la casilla y el check a mano, así el resultado no depende de
+   cómo GHL lo pinte. */
 #terms_and_conditions_1_x5rqinJeVXbxIOludYLh,
 #terms_and_conditions_2_x5rqinJeVXbxIOludYLh{
-  accent-color: #c9962f !important;
-  width: 16px !important;
-  height: 16px !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  width: 18px !important;
+  height: 18px !important;
+  margin: 0 8px 0 0 !important;
+  border: 1px solid #c9962f !important;
+  border-radius: 4px !important;
+  background-color: #100e0c !important;
+  position: relative !important;
+  cursor: pointer !important;
+  flex-shrink: 0 !important;
+}
+#terms_and_conditions_1_x5rqinJeVXbxIOludYLh:checked,
+#terms_and_conditions_2_x5rqinJeVXbxIOludYLh:checked{
+  background: linear-gradient(120deg, #a9781f 0%, #f2cf6b 45%, #c9962f 100%) !important;
+}
+#terms_and_conditions_1_x5rqinJeVXbxIOludYLh:checked::after,
+#terms_and_conditions_2_x5rqinJeVXbxIOludYLh:checked::after{
+  content: "\2713" !important;
+  position: absolute !important;
+  top: 50% !important; left: 50% !important;
+  transform: translate(-50%,-52%) !important;
+  color: #1a1305 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
 }
