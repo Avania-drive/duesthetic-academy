@@ -3,29 +3,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <!-- LANDING — PARTE A de 4 (+ 3 snippets de cursos aparte)
-     Ya no usamos iframe/modal propio para el formulario: se abre con
-     Popups nativos de GHL, disparados por Buttons nativos de GHL.
-     Esta página tiene 5 botones "Más información" en total. Móntala
-     así, en este orden exacto:
+     SISTEMA DE "BOTÓN PROXY": los 5 Buttons nativos de GHL (Action:
+     Open Popup) que ya tienes montados en tus Rows/Columns SE QUEDAN
+     donde están — no los muevas ni los borres — pero quedan ocultos
+     visualmente (ghl-embed.css los oculta por su ID con la clase
+     .btn-native-hidden). Los botones "Más información" que SÍ se ven
+     son los nuestros, dentro de cada card/sección de este HTML, y al
+     pulsarlos disparan un .click() por JS sobre su botón nativo
+     oculto correspondiente (mismo Popup, sin bordear el diseño con
+     Rows sueltos fuera de las cards).
 
-     1) Crea un Popup en GHL (Sites → Popups → Nuevo) con el elemento
-        Form dentro (el mismo "[FORM] Reserva"). Trigger: manual /
-        On Click (NO "Always Show"). Puedes usar el MISMO Popup para
-        los 5 botones, no hace falta crear uno por botón.
-     2) Pega este archivo (Parte A) en un bloque Custom HTML.
-     3) Debajo, añade un Row con un Button nativo:
-          - Texto: "Más información"
-          - Action: "Open Popup" → el Popup que creaste en el paso 1
-          - Clase CSS del botón: "botonpopup" — hereda el estilo dorado
-            ya definido en ghl-embed.css (fondo degradado, texto
-            #1a1305, radio 999px, padding 14px 30px, Poppins 600),
-            sin tener que replicar valores a mano.
-          - Estilo del Row: fondo #0a0908 (el mismo que el hero),
-            contenido centrado, sin borde propio, padding vertical
-            ~20px 0.
-     4) Debajo de ese Row, añade otro bloque Custom HTML y pega
-        ghl-embed-parteB.html (Parte B).
-     5) El CSS va aparte: pega ghl-embed.css en el campo Custom CSS
+     Mapa botón visible → botón nativo oculto (data-proxy → id real):
+       Hero        → button-TjAHeND_GS_btn
+       Curso Grupal→ button-_7BptWk5ho_btn
+       VIP         → button-LXhXa3CbRA_btn
+       Monográficos→ button-eq_age5tcj_btn
+       Admisión    → button-wixx59Bvsn_btn
+     (Si algún día borras y recreas uno de los 5 botones nativos, GHL
+     le asignará otro ID — actualízalo en el data-proxy del botón
+     correspondiente y en el selector de ghl-embed.css.)
+
+     Cómo montar esta página en GHL:
+     1. Pega este archivo (Parte A) en un bloque Custom HTML.
+     2. Sigue con ghl-embed-parteB.html, las 3 columnas de cursos
+        (igual que ya las tienes montadas), ghl-embed-parteC.html y
+        ghl-embed-parteD.html, en el mismo orden que antes.
+     3. El CSS va aparte: pega ghl-embed.css en el campo Custom CSS
         de esta página de GHL (una sola vez).
      Imágenes y vídeos se sirven directamente desde
      https://duesthetic-academy.vercel.app/assets/... (el despliegue
@@ -39,7 +42,7 @@
 </a>
 
 <!-- ============================================================
-     HERO (step line + titular) — el botón #1 va después de este bloque
+     HERO
      ============================================================ -->
 <section class="hero" id="como-funciona">
   <div class="hero-glow"></div>
@@ -47,6 +50,22 @@
     <span class="badge">★ Nº1 en práctica con pacientes reales · Madrid &amp; Málaga</span>
     <h1>La formación que define<br><em>tu futuro.</em></h1>
     <p class="hero-sub">La academia nº1 en formación práctica de armonización facial. Más de 50 ediciones en Madrid y 10 en Málaga. Más de 600 profesionales entrenados sobre pacientes reales.</p>
+    <div class="hero-actions">
+      <button type="button" class="btn btn-gold js-popup-trigger" data-proxy="button-TjAHeND_GS_btn">Más información</button>
+    </div>
+    <div class="stat-row">
+      <div class="stat-card">
+        <span class="stat-num">+60</span>
+        <span class="stat-label">Ediciones</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">+600</span>
+        <span class="stat-label">Alumnos entrenados</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">Nº1</span>
+        <span class="stat-label">En prácticas con pacientes reales</span>
+      </div>
+    </div>
   </div>
 </section>
-<!-- Row con Button nativo #1 (ver instrucciones arriba) va aquí debajo -->

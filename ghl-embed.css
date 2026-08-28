@@ -131,8 +131,13 @@ em{
   color: #b8b0a2 !important;
   font-size: 1.02rem !important;
 }
-/* Continuación visual del hero (Parte B) tras el Row del Button #1 */
-.hero-stats-continue{ background: #0a0908 !important; padding: 0 0 70px !important; }
+.hero-actions{
+  display: flex !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 56px !important;
+}
 .stat-row{
   display: flex !important;
   justify-content: center !important;
@@ -259,8 +264,6 @@ em{
 .location-card strong{ display: block !important; margin-bottom: 6px !important; color: #f2cf6b !important; font-size: .92rem !important; }
 .location-card p{ font-size: .85rem !important; color: #b8b0a2 !important; }
 .loc-pin{ font-size: 1.1rem !important; }
-/* Continuación visual de Admisión (Parte D) tras el Row del Button #5 */
-.admision-tail{ background: #100e0c !important; padding: 0 0 96px !important; }
 
 /* Footer */
 .site-footer{
@@ -290,30 +293,31 @@ em{
   .section{ padding: 64px 0 !important; }
 }
 
-/* ---------- Buttons nativos que abren el Popup ----------
-   Ponle esta clase ".botonpopup" a los 5 Buttons nativos (Action:
-   Open Popup) para que se vean igual que el resto de botones dorados
-   de la landing. Mismo estilo que .btn.btn-gold. */
-.botonpopup{
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 8px !important;
-  padding: 14px 30px !important;
-  border-radius: 999px !important;
-  font-size: .9rem !important;
-  font-weight: 600 !important;
-  border: 1px solid transparent !important;
-  cursor: pointer !important;
-  transition: transform .2s ease, box-shadow .2s ease, background .2s ease !important;
+/* ---------- Ocultar los 5 Buttons nativos (sistema de botón proxy) ----------
+   Estos 5 botones nativos de GHL (Action: Open Popup) se quedan donde
+   están montados, pero ocultos: los botones que se ven son los
+   nuestros (.js-popup-trigger), que al pulsarlos disparan un .click()
+   sobre el nativo correspondiente por su ID (ver el <script> de
+   ghl-embed-parteD.html). Oculto "de verdad" (fuera del flujo, sin
+   tamaño) en vez de solo opacity/visibility, para que la Row/Column
+   que lo contiene no deje un hueco vacío.
+   Si borras y recreas alguno de estos botones, GHL le asigna un ID
+   nuevo — actualiza el selector aquí y el data-proxy del botón visible
+   correspondiente en el HTML. */
+#button-TjAHeND_GS_btn,
+#button-_7BptWk5ho_btn,
+#button-LXhXa3CbRA_btn,
+#button-eq_age5tcj_btn,
+#button-wixx59Bvsn_btn{
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0,0,0,0) !important;
   white-space: nowrap !important;
-  background: linear-gradient(120deg, #a9781f 0%, #f2cf6b 45%, #c9962f 100%) !important;
-  color: #1a1305 !important;
-  box-shadow: 0 10px 30px -12px rgba(201,150,47,.45) !important;
-}
-.botonpopup:hover{
-  transform: translateY(-2px) !important;
-  box-shadow: 0 14px 34px -10px rgba(201,150,47,.6) !important;
+  border: 0 !important;
 }
 
 /* ---------- Campos de selección del Form nativo ----------

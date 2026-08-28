@@ -1,32 +1,8 @@
 <!-- LANDING — PARTE D de 4 (última)
-     Va después del Row del Button #5 (ver instrucciones en Parte C).
-     Ubicaciones (en su propia tarjeta, separada de la de arriba
-     porque el botón nativo se coló en medio) + Footer + Script del
-     carrusel. El CSS (ghl-embed.css) va en el campo Custom CSS de la
-     página, una sola vez, con cualquiera de las 4 partes. -->
-
-<section class="admision-tail" id="admision-ubicaciones">
-  <div class="container">
-    <div class="admission-top card">
-      <div class="locations-row">
-        <div class="location-card">
-          <span class="loc-pin">📍</span>
-          <div>
-            <strong>Sede Madrid</strong>
-            <p>C/ O'Donnell 49, Esc. B, Bajo dcha.<br>Barrio de Salamanca, 28009</p>
-          </div>
-        </div>
-        <div class="location-card">
-          <span class="loc-pin">📍</span>
-          <div>
-            <strong>Sede Málaga</strong>
-            <p>Edificio Scala, C/ Hilera 8, Portal 3, Piso 2B<br>Distrito Centro, 29007</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+     Va después de la Parte C. Footer + Scripts (carrusel + el
+     "botón proxy" que dispara los botones nativos ocultos). El CSS
+     (ghl-embed.css) va en el campo Custom CSS de la página, una sola
+     vez, con cualquiera de las 4 partes. -->
 
 <!-- ============================================================
      FOOTER
@@ -47,21 +23,33 @@
 </footer>
 
 <!-- ============================================================
-     SCRIPTS — solo el carrusel; el formulario lo gestiona GHL solo
+     SCRIPTS — carrusel + botón proxy
+     El formulario en sí lo abre GHL solo (Popup nativo). Este script
+     solo hace de puente: al pulsar uno de nuestros botones visibles
+     (.js-popup-trigger), busca su botón nativo oculto correspondiente
+     (por el id en data-proxy) y le dispara un .click() real, que es
+     lo que realmente abre el Popup.
      ============================================================ -->
 <script>
 document.addEventListener('click', (e) => {
+  const trigger = e.target.closest('.js-popup-trigger');
+  if (trigger) {
+    const proxy = document.getElementById(trigger.dataset.proxy);
+    if (proxy) proxy.click();
+    return;
+  }
   const arrow = e.target.closest('.carousel-arrow');
-  if (!arrow) return;
-  const carousel = document.getElementById(arrow.dataset.target);
-  const track = carousel && carousel.querySelector('.carousel-track');
-  if (!track) return;
-  const card = track.querySelector('.phone-card');
-  const gap = 20;
-  const scrollAmount = (card ? card.offsetWidth : 230) + gap;
-  track.scrollBy({
-    left: arrow.classList.contains('next') ? scrollAmount : -scrollAmount,
-    behavior: 'smooth'
-  });
-});
+  if (arrow) {
+    const carousel = document.getElementById(arrow.dataset.target);
+    const track = carousel && carousel.querySelector('.carousel-track');
+    if (!track) return;
+    const card = track.querySelector('.phone-card');
+    const gap = 20;
+    const scrollAmount = (card ? card.offsetWidth : 230) + gap;
+    track.scrollBy({
+      left: arrow.classList.contains('next') ? scrollAmount : -scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+}, true);
 </script>

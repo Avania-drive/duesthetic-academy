@@ -1,28 +1,7 @@
 <!-- LANDING — PARTE B de 4
-     Va después del Row del Button #1 (ver instrucciones en Parte A).
-     Retoma el fondo oscuro del hero para las estadísticas (stat-row),
-     luego Resumen, y termina con la cabecera de Cursos — justo antes
-     de las 3 columnas nativas con las cards. -->
-
-<!-- Continuación visual del hero: estadísticas -->
-<div class="hero-stats-continue">
-  <div class="container">
-    <div class="stat-row">
-      <div class="stat-card">
-        <span class="stat-num">+60</span>
-        <span class="stat-label">Ediciones</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-num">+600</span>
-        <span class="stat-label">Alumnos entrenados</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-num">Nº1</span>
-        <span class="stat-label">En prácticas con pacientes reales</span>
-      </div>
-    </div>
-  </div>
-</div>
+     Va después de la Parte A. Resumen, y termina con la cabecera de
+     Cursos — justo antes de las 3 columnas nativas con las cards
+     (que ya tienes montadas, no hace falta tocarlas de estructura). -->
 
 <!-- ============================================================
      RESUMEN — Armonización Facial Integral (lista de técnicas)
@@ -50,19 +29,14 @@
 
 <!-- ============================================================
      CURSOS — cabecera de la sección
-     La rejilla de 3 cards YA NO va en Custom HTML: móntala como un
-     Row nativo de GHL con 3 Columns, justo debajo de este bloque.
-     Dale a ese Row fondo #100e0c (para continuar sin corte la sección
-     "alterna" que empieza aquí). En CADA Column, en este orden:
-       1. Bloque Custom HTML con el contenido de la card — usa
-          ghl-embed-curso-grupal.html / -curso-vip.html / -curso-mono.html
-          para cada una de las 3 columnas respectivamente.
-       2. Debajo, dentro de esa MISMA Column, un Button nativo
-          "Más información" → Action: Open Popup (el mismo Popup de
-          antes), clase CSS "botonpopup" (mismo estilo que el Button #1).
-     Después de esas 3 columnas, sigue con ghl-embed-parteC.html
-     (empieza ya en Testimonios, que tiene fondo distinto — no hace
-     falta continuar el #100e0c más allá del Row de las 3 columnas). -->
+     Las 3 columnas nativas de debajo (Curso Grupal / VIP / Monográficos)
+     se quedan tal cual las tienes: Custom HTML con el contenido de la
+     card (ghl-embed-curso-grupal.html / -curso-vip.html / -curso-mono.html,
+     ya actualizados con nuestro propio botón dentro de la card) + el
+     Button nativo de esa columna, que ahora queda oculto (lo esconde
+     ghl-embed.css por su ID) — no hace falta borrarlo ni tocar su
+     estilo, solo actualizar el Custom HTML de cada columna.
+     Después de esas 3 columnas, sigue con ghl-embed-parteC.html. -->
 <section class="section section-alt" id="cursos">
   <div class="container">
     <div class="section-head center">

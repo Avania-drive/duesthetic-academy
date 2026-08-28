@@ -33,18 +33,34 @@
 </section>
 
 <!-- ============================================================
-     ADMISIÓN / UBICACIONES — cabecera + CTA
-     El botón se quita de aquí: el Row con el Button nativo #5 va
-     justo después de este bloque, con el mismo fondo #100e0c que
-     esta sección (sección "alterna") para que no se note el corte.
+     ADMISIÓN / UBICACIONES — cabecera + CTA + sedes
+     El Button nativo #5 se queda donde lo tengas montado, oculto
+     (ghl-embed.css). El botón visible es el de aquí dentro.
      ============================================================ -->
 <section class="section section-alt" id="admision">
   <div class="container">
     <div class="admission-top card">
       <h2>¿Quieres más información?</h2>
       <p>Resuelve tus dudas y consulta la disponibilidad de la próxima edición en Madrid o Málaga.</p>
+      <button type="button" class="btn btn-gold js-popup-trigger" data-proxy="button-wixx59Bvsn_btn">Más información</button>
+
+      <div class="locations-row">
+        <div class="location-card">
+          <span class="loc-pin">📍</span>
+          <div>
+            <strong>Sede Madrid</strong>
+            <p>C/ O'Donnell 49, Esc. B, Bajo dcha.<br>Barrio de Salamanca, 28009</p>
+          </div>
+        </div>
+        <div class="location-card">
+          <span class="loc-pin">📍</span>
+          <div>
+            <strong>Sede Málaga</strong>
+            <p>Edificio Scala, C/ Hilera 8, Portal 3, Piso 2B<br>Distrito Centro, 29007</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-<!-- Row con Button nativo #5 (mismo estilo que el #1, fondo #100e0c
-     en el Row) va aquí debajo. Sigue con ghl-embed-parteD.html. -->
+<!-- Sigue con ghl-embed-parteD.html. -->
