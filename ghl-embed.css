@@ -390,3 +390,14 @@ select option{
   background-color: #100e0c !important;
   color: #f3efe7 !important;
 }
+
+/* ---------- Checks de términos del Form nativo ----------
+   Salen blancos por defecto y se pierden sobre el fondo oscuro al
+   marcarlos — se les da el color dorado de la marca para que el check
+   se distinga cuando está seleccionado. */
+#terms_and_conditions_1_x5rqinJeVXbxIOludYLh,
+#terms_and_conditions_2_x5rqinJeVXbxIOludYLh{
+  accent-color: #c9962f !important;
+  width: 16px !important;
+  height: 16px !important;
+}
