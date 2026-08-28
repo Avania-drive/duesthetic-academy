@@ -212,17 +212,25 @@ em{
   padding:28px;
 }
 
-/* Pills (resumen) */
-.pill-list{ display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
-.pill{
-  font-size:.75rem;
-  padding:6px 14px;
-  border-radius:999px;
-  border:1px solid var(--card-border);
-  color:var(--text-dim);
-  background:rgba(255,255,255,.02);
+/* Técnicas (resumen) */
+.grid-2{ grid-template-columns:repeat(2,1fr); }
+.technique-card h3{
+  font-size:1rem;
+  margin-bottom:8px;
+  color:var(--gold-2);
 }
-.center-pills{ justify-content:center; margin-top:28px; }
+.technique-card p{ font-size:.88rem; color:var(--text-dim); }
+.techniques-note{
+  margin-top:32px;
+  padding:24px 28px;
+  background:var(--card);
+  border:1px solid var(--card-border);
+  border-left:3px solid var(--gold-1);
+  border-radius:var(--radius);
+  color:var(--text-dim);
+  font-size:.92rem;
+  line-height:1.65;
+}
 
 /* Courses */
 .course-card{ display:flex; flex-direction:column; }
@@ -400,4 +408,5 @@ body.modal-open{ overflow:hidden; }
 @media (max-width:600px){
   .section{ padding:64px 0; }
   .grid-3{ grid-template-columns:1fr; }
+  .grid-2{ grid-template-columns:1fr; }
 }
