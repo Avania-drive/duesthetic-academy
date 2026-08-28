@@ -1,7 +1,19 @@
 <!-- LANDING — PARTE B de 4
-     Va después de la Parte A. Resumen, y termina con la cabecera de
-     Cursos — justo antes de las 3 columnas nativas con las cards
-     (que ya tienes montadas, no hace falta tocarlas de estructura). -->
+     Va después de la Parte A. Resumen + Cursos completos (las 3 cards
+     ya van aquí mismo, en una rejilla normal — ya no hace falta
+     repartirlas en Columns nativas de GHL, porque los botones ya no
+     son nativos, son proxy).
+
+     Los 3 Buttons nativos de Cursos (Action: Open Popup) que tenías
+     montados en las Columns pueden quedarse donde estén — solo se
+     ocultan por CSS, da igual en qué Row/Column vivan ahora. Si te
+     resulta más cómodo, puedes juntarlos los tres en un único Row al
+     final de la página (después de Parte D) para no dejar rastro de
+     la estructura de columnas antigua; funcionalmente da igual,
+     mientras conserven su ID:
+       button-_7BptWk5ho_btn (Curso Grupal)
+       button-LXhXa3CbRA_btn (VIP)
+       button-eq_age5tcj_btn (Monográficos) -->
 
 <!-- ============================================================
      RESUMEN — Armonización Facial Integral (lista de técnicas)
@@ -28,21 +40,37 @@
 </section>
 
 <!-- ============================================================
-     CURSOS — cabecera de la sección
-     Las 3 columnas nativas de debajo (Curso Grupal / VIP / Monográficos)
-     se quedan tal cual las tienes: Custom HTML con el contenido de la
-     card (ghl-embed-curso-grupal.html / -curso-vip.html / -curso-mono.html,
-     ya actualizados con nuestro propio botón dentro de la card) + el
-     Button nativo de esa columna, que ahora queda oculto (lo esconde
-     ghl-embed.css por su ID) — no hace falta borrarlo ni tocar su
-     estilo, solo actualizar el Custom HTML de cada columna.
-     Después de esas 3 columnas, sigue con ghl-embed-parteC.html. -->
+     CURSOS — Curso Grupal / VIP One-to-One / Monográficos
+     ============================================================ -->
 <section class="section section-alt" id="cursos">
   <div class="container">
     <div class="section-head center">
       <span class="eyebrow">Elige tu formación</span>
       <h2>Tres formatos, <em>un mismo nivel</em></h2>
       <p>Grupal, VIP one-to-one o monográfico por técnica: tú eliges cómo formarte.</p>
+    </div>
+
+    <div class="grid grid-3">
+      <div class="card course-card">
+        <h3>Curso Grupal</h3>
+        <p>Formación intensiva de fin de semana, práctica sobre pacientes reales. Máx. 3 alumnos por camilla.</p>
+        <span class="price-main">1.500€</span>
+        <button type="button" class="btn btn-gold btn-block js-popup-trigger" data-proxy="button-_7BptWk5ho_btn">Más información</button>
+      </div>
+
+      <div class="card course-card course-card--vip">
+        <h3>VIP One-to-One</h3>
+        <p>Un docente dedicado íntegramente a ti en una jornada intensiva de 8h, con la técnica a tu elección.</p>
+        <span class="price-main">2.000€</span>
+        <button type="button" class="btn btn-gold btn-block js-popup-trigger" data-proxy="button-LXhXa3CbRA_btn">Más información</button>
+      </div>
+
+      <div class="card course-card">
+        <h3>Monográficos</h3>
+        <p>¿Solo quieres dominar una técnica? Jornada 100% práctica sobre pacientes reales.</p>
+        <span class="price-main">1.000€ / edición</span>
+        <button type="button" class="btn btn-gold btn-block js-popup-trigger" data-proxy="button-eq_age5tcj_btn">Más información</button>
+      </div>
     </div>
   </div>
 </section>

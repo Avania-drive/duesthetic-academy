@@ -173,6 +173,9 @@ em{
 .section-head h2{ font-size: clamp(1.7rem, 3.4vw, 2.4rem) !important; margin-bottom: 14px !important; }
 .section-head p{ color: #b8b0a2 !important; }
 
+.grid{ display: grid !important; gap: 20px !important; }
+.grid-3{ grid-template-columns: repeat(3,1fr) !important; }
+
 .card{
   background: #17140f !important;
   border: 1px solid #2a2419 !important;
@@ -286,11 +289,13 @@ em{
 
 /* ---------- Responsive ---------- */
 @media (max-width: 960px){
+  .grid-3{ grid-template-columns: repeat(2,1fr) !important; }
   .locations-row{ grid-template-columns: 1fr !important; }
 }
 
 @media (max-width: 600px){
   .section{ padding: 64px 0 !important; }
+  .grid-3{ grid-template-columns: 1fr !important; }
 }
 
 /* ---------- Ocultar los 5 Buttons nativos (sistema de botón proxy) ----------
