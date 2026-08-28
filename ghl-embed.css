@@ -321,22 +321,6 @@ em{
   .section{ padding: 64px 0 !important; }
 }
 
-/* ---------- Anular Form/Popup nativo huérfano ----------
-   Hay un elemento Form nativo de GHL (id="form-builder") suelto en el
-   lienzo de esta página, sin relación con el Popup nuevo que abren los
-   Buttons nativos. Desactivarlo desde Settings de Popups en GHL no lo
-   saca del DOM ni le quita la interactividad (sigue siendo clicable/
-   focuseable aunque invisible, disparando el autocompletado del
-   navegador "flotando" sobre el resto del contenido). Se anula por
-   completo aquí como red de seguridad mientras se localiza y elimina
-   ese elemento desde el editor. */
-#form-builder{
-  display: none !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-  opacity: 0 !important;
-}
-
 /* ---------- Buttons nativos que abren el Popup ----------
    Ponle esta clase ".botonpopup" a los 5 Buttons nativos (Action:
    Open Popup) para que se vean igual que el resto de botones dorados
