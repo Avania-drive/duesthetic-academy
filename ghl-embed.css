@@ -336,3 +336,29 @@ em{
   pointer-events: none !important;
   opacity: 0 !important;
 }
+
+/* ---------- Button nativo #1 (Hero) ----------
+   #button-TjAHeND_GS es el ID real que genera GHL para este Button.
+   Si lo borras y lo vuelves a crear, revisa el ID (inspecciona el
+   elemento) y actualízalo aquí si cambia. Mismo estilo que .btn.btn-gold. */
+#button-TjAHeND_GS{
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 14px 30px !important;
+  border-radius: 999px !important;
+  font-size: .9rem !important;
+  font-weight: 600 !important;
+  border: 1px solid transparent !important;
+  cursor: pointer !important;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease !important;
+  white-space: nowrap !important;
+  background: linear-gradient(120deg, #a9781f 0%, #f2cf6b 45%, #c9962f 100%) !important;
+  color: #1a1305 !important;
+  box-shadow: 0 10px 30px -12px rgba(201,150,47,.45) !important;
+}
+#button-TjAHeND_GS:hover{
+  transform: translateY(-2px) !important;
+  box-shadow: 0 14px 34px -10px rgba(201,150,47,.6) !important;
+}
