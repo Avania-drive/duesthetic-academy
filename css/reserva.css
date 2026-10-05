@@ -313,6 +313,12 @@ em{
 .team-card p + p, .team-list + p{ margin-top:10px; }
 .team-list{ list-style:disc; margin:10px 0 0; padding-left:18px; text-align:left; font-size:.82rem; color:var(--text-dim); }
 .team-list li{ margin-bottom:4px; }
+/* Cards horizontales a 2 columnas: avatar a la izquierda, texto a la derecha */
+.team-grid{ grid-template-columns:repeat(2,1fr); }
+.team-card{ display:grid; grid-template-columns:64px 1fr; column-gap:20px; align-content:start; text-align:left; }
+.team-card > *{ grid-column:2; }
+.team-card > .avatar-ring{ grid-column:1; grid-row:1 / span 6; width:64px; height:64px; margin:0; }
+.team-card p{ text-align:left; }
 
 .stat-row{
   display:flex;
