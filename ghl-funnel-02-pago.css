@@ -63,3 +63,18 @@ em{
   margin-top: 28px !important; font-size: .76rem !important; color: #7d7568 !important; letter-spacing: .02em !important;
 }
 .fine-print{ text-align: center !important; font-size: .76rem !important; color: #7d7568 !important; margin-top: 22px !important; max-width: 480px !important; margin-left: auto !important; margin-right: auto !important; }
+
+/* ==========================================================================
+   Order Form nativo de GHL (#two-setp-order-_ZO9sVT_AE)
+   GHL lo renderiza sobre fondo blanco y desentona con el resto de la
+   página. Se cambia SOLO el fondo a la tarjeta oscura; todo lo demás
+   (textos, campos, pasos, botón) se deja tal cual lo pinta GHL.
+   Si GHL regenera el ID al recrear el Order Form, actualízalo aquí;
+   .two-step-order-form y [id^="two-setp-order-"] quedan de respaldo.
+   ========================================================================== */
+#two-setp-order-_ZO9sVT_AE,
+.two-step-order-form,
+[id^="two-setp-order-"],
+[id^="two-step-order-"]{
+  background-color: #17140f !important;
+}

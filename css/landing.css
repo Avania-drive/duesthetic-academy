@@ -243,7 +243,8 @@ em{
   margin-bottom:8px;
   color:var(--gold-2);
 }
-.technique-card p{ font-size:.88rem; color:var(--text-dim); }
+.technique-card p{ font-size:.88rem; color:var(--text-dim); margin:0; }
+.technique-card p + p{ margin-top:8px; opacity:.72; }
 .techniques-note{
   margin-top:32px;
   padding:24px 28px;
@@ -263,6 +264,9 @@ em{
 .course-card > p{ color:var(--text-dim); font-size:.92rem; margin-bottom:20px; }
 .course-card .price-main{ display:block; margin:0 0 20px; }
 .price-main{ font-family:var(--font-accent); font-style:italic; font-size:1.9rem; }
+/* Hueco invisible con la forma del botón: alinea el precio de las cards
+   sin botón (VIP, Monográficos) con el de la card que sí lo tiene. */
+.course-card__spacer{ visibility:hidden; pointer-events:none; }
 
 /* Carousels */
 .carousel{ position:relative; display:flex; align-items:center; gap:14px; }
